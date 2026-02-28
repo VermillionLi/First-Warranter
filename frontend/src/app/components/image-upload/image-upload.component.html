@@ -1,3 +1,41 @@
-<p>
-  image-upload works!
-</p>
+<ion-card class="upload-card">
+  <ion-card-content>
+    <div 
+      class="drop-zone" 
+      (click)="fileInput.click()"
+      (dragover)="onDragOver($event)"
+      (dragleave)="onDragLeave($event)"
+      (drop)="onDrop($event)"
+      [class.drag-over]="isDragging">
+      
+      <div class="upload-content">
+        <ion-icon name="cloud-upload-outline" color="primary"></ion-icon>
+        <h3>Drag & Drop Image</h3>
+        <p>or <span>browse files</span> from your device</p>
+        <small>Supports: PNG, JPG, JPEG</small>
+      </div>
+
+      <input 
+        #fileInput 
+        type="file" 
+        (change)="onFileSelected($event)" 
+        accept="image/png, image/jpeg, image/jpg" 
+        hidden />
+    </div>
+
+    <ion-list *ngIf="selectedFile" class="ion-margin-top">
+      <ion-item lines="none" class="preview-item">
+        <ion-thumbnail slot="start">
+          <img [src]="previewUrl" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{ selectedFile.name }}</h2>
+          <p>{{ (selectedFile.size / 1024).toFixed(2) }} KB</p>
+        </ion-label>
+        <ion-button fill="clear" color="danger" (click)="clearSelection()">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,54 @@
+.upload-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.drop-zone {
+  border: 2px dashed var(--ion-color-medium);
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: var(--ion-color-light);
+  cursor: pointer;
+
+  &.drag-over {
+    border-color: var(--ion-color-primary);
+    background: rgba(var(--ion-color-primary-rgb), 0.05);
+    transform: scale(1.02);
+  }
+
+  .upload-content {
+    ion-icon {
+      font-size: 64px;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 600;
+      color: var(--ion-color-dark);
+    }
+
+    p {
+      margin: 8px 0;
+      color: var(--ion-color-step-600);
+      span {
+        color: var(--ion-color-primary);
+        font-weight: bold;
+      }
+    }
+
+    small {
+      color: var(--ion-color-step-400);
+    }
+  }
+}
+
+.preview-item {
+  --background: var(--ion-color-light);
+  border-radius: 8px;
+  ion-thumbnail {
+    --border-radius: 4px;
+  }
+}
