@@ -6,7 +6,18 @@ const {template} = require("./API_functions");
 const {testImage} = require("./API_functions")
 const {extname, join} = require("node:path");
 const { readdir, unlink, access , mkdir} = require('fs/promises');
+const e = require("express");
 let imageNumber = 0
+
+// Allow requests from Ionic frontend
+
+app.use(cors({
+    origin: 'http://localhost:8100',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
+
+app.use(express.json());
 
 //upload folder deleter function:
 
@@ -21,17 +32,12 @@ async function folderExists(path) {
 
 async function sanitize_upload_folder() {
     if (await folderExists('uploads/')){
-        try {
             const files = await readdir('uploads/');
             await Promise.all(
                 files.map(file =>
                     unlink(join('uploads/', file))
                 )
             );
-        } catch (err) {
-            console.error(err);
-            throw err;
-        }
     }else{
         await mkdir(join(__dirname, 'uploads/'))
     }
@@ -60,12 +66,13 @@ app.post(
             next();
         }catch(err){
             res.status(500).json({error: "deletion of previous images failed"})
+            console.log(err)
         }
     },
     upload.array('images'),
     (req, res) => {
         console.log('Received files:', req.files);
-        res.json({
+        res.status(200).json({
             message: 'Files uploaded successfully!',
             count: req.files.length
         });
@@ -78,25 +85,17 @@ app.get('/', (req, res) => {
         "message": "test successful"
     })
 });
-// Allow requests from Ionic frontend
 
-    app.use(cors({
-        origin: 'http://localhost:8100',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        credentials: true
-    }));
 
-    app.use(express.json());
+app.get('/useAI', async (req, res) => {
+    const data = await template()
+    res.status(200).send(data)
+})
 
-    app.get('/useAI', async (req, res) => {
-        const data = await template()
-        res.status(200).send(data)
-    })
+app.listen(3000, () => console.log('Backend running on port 3000'));
 
-    app.listen(3000, () => console.log('Backend running on port 3000'));
-
-    app.get('/testImage', async (req, res) => {
-        const data = await testImage()
-        res.status(200).send(data)
-    });
+app.get('/testImage', async (req, res) => {
+    const data = await testImage()
+    res.status(200).send(data)
+});
 
