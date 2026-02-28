@@ -5,21 +5,36 @@ const app = express();
 const {template} = require("./API_functions");
 const {testImage} = require("./API_functions")
 const {extname, join} = require("node:path");
-const {readdir, unlink} = require("node:fs");
-
+const { readdir, unlink, access , mkdir} = require('fs/promises');
 let imageNumber = 0
 
 //upload folder deleter function:
-async function empty_uploads_folder() {
-    readdir('uploads/', (err, files) => {
-        if (err) return console.error(err);
 
-        for (const file of files) {
-            unlink(join('uploads/', file), (err) => {
-                if (err) console.error(err);
-            });
+async function folderExists(path) {
+    try {
+        await access(path);
+        return true;  // Folder exists
+    } catch {
+        return false; // Folder does not exist
+    }
+}
+
+async function sanitize_upload_folder() {
+    if (await folderExists('uploads/')){
+        try {
+            const files = await readdir('uploads/');
+            await Promise.all(
+                files.map(file =>
+                    unlink(join('uploads/', file))
+                )
+            );
+        } catch (err) {
+            console.error(err);
+            throw err;
         }
-    })
+    }else{
+        await mkdir(join(__dirname, 'uploads/'))
+    }
 }
 
 
@@ -36,7 +51,35 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage});
 
+app.post(
+    '/api/upload',
+    async (req, res, next) => {
+        try{
+            await sanitize_upload_folder();
+            imageNumber = 0;
+            next();
+        }catch(err){
+            res.status(500).json({error: "deletion of previous images failed"})
+        }
+    },
+    upload.array('images'),
+    (req, res) => {
+        console.log('Received files:', req.files);
+        res.json({
+            message: 'Files uploaded successfully!',
+            count: req.files.length
+        });
+    }
+);
+
+
+app.get('/', (req, res) => {
+    res.status(200).send({
+        "message": "test successful"
+    })
+});
 // Allow requests from Ionic frontend
+
     app.use(cors({
         origin: 'http://localhost:8100',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
@@ -44,28 +87,6 @@ const upload = multer({storage});
     }));
 
     app.use(express.json());
-
-    app.post(
-        '/api/upload',
-        async (req, res, next) => {
-            await empty_uploads_folder();
-            imageNumber = 0;
-            next();
-        },
-        upload.array('images'),
-        (req, res) => {
-            console.log('Received files:', req.files);
-            res.json({
-                message: 'Files uploaded successfully!',
-                count: req.files.length
-            });
-        }
-    );
-    app.get('/', (req, res) => {
-        res.status(200).send({
-            "message": "test successful"
-        })
-    });
 
     app.get('/useAI', async (req, res) => {
         const data = await template()
