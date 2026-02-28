@@ -52,3 +52,34 @@
     --border-radius: 4px;
   }
 }
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding: 0 8px;
+  ion-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.preview-item {
+  --padding-start: 8px;
+  --inner-padding-end: 8px;
+  margin-bottom: 4px;
+  
+  ion-thumbnail {
+    --size: 48px;
+    --border-radius: 8px;
+    margin-right: 12px;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+}

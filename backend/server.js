@@ -1,9 +1,10 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path')
+const multer = require('multer');
 const app = express();
 const {template} = require("./API_functions");
 const {testImage} = require("./API_functions")
+const upload = multer({ dest: 'uploads/' });
 
 // Allow requests from Ionic frontend
 app.use(cors({
@@ -13,6 +14,11 @@ app.use(cors({
 }));
 
 app.use(express.json());
+
+app.post('/api/upload', upload.array('images'), (req, res) => {
+  console.log('Received files:', req.files);
+  res.json({ message: 'Files uploaded successfully!', count: req.files.length });
+});
 
 app.get('/', (req, res) => {
     res.status(200).send({
