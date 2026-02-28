@@ -7,6 +7,7 @@ import faiss
 import requests
 from sentence_transformers import SentenceTransformer
 
+
 # Where ingest.py saved the FAISS index + the corpus metadata
 INDEX_DIR = "index"
 
