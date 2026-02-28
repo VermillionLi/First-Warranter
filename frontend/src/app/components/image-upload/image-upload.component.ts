@@ -9,13 +9,15 @@ import {
   IonItem, 
   IonThumbnail, 
   IonLabel, 
-  IonButton
+  IonButton,
+  IonSpinner
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
- cloudUploadOutline, 
- trashOutline, 
- imagesOutline 
+  alertCircleOutline,
+  cloudUploadOutline, 
+  trashOutline, 
+  imagesOutline 
 } from 'ionicons/icons';
 
 @Component({
@@ -25,16 +27,18 @@ import {
   standalone: true,
   imports: [
     CommonModule, IonCard, IonCardContent, IonIcon, 
-    IonList, IonItem, IonThumbnail, IonLabel, IonButton
+    IonList, IonItem, IonThumbnail, IonLabel, IonButton, IonSpinner
   ]
 })
 export class ImageUploadComponent {
   isDragging = false;
+  isUploading = false;
+  errorMessage: string | null = null;
   selectedFiles: File[] = [];
   previews: { url: string; name: string; size: number }[] = [];
 
   constructor(private http: HttpClient) {
-    addIcons({ cloudUploadOutline, trashOutline, imagesOutline });
+    addIcons({ alertCircleOutline, cloudUploadOutline, trashOutline, imagesOutline });
   }
 
   onDragOver(event: DragEvent) {
@@ -56,6 +60,7 @@ export class ImageUploadComponent {
   }
 
   onFileSelected(event: any) {
+    this.errorMessage = null;
     if (event.target.files) {
       this.handleFiles(event.target.files);
     }
@@ -92,10 +97,10 @@ export class ImageUploadComponent {
   }
 
   uploadImages() {
-    console.log("Hi");
     if (this.selectedFiles.length === 0) return;
 
-    console.log("Trying to upload file(s)");
+    this.isUploading = true;
+    this.errorMessage = null;
 
     const formData = new FormData();
 
@@ -104,8 +109,16 @@ export class ImageUploadComponent {
     });
 
     this.http.post('http://localhost:3000/api/upload', formData).subscribe({
-      next: (res) => console.log('Upload successful', res),
-      error: (err) => console.error('Upload failed', err)
+      next: (res) => {
+        console.log('Success', res);
+        this.isUploading = false;
+        this.clearAll();
+      },
+      error: (err) => {
+        console.error('Upload failed', err)
+        this.isUploading = false;
+        this.errorMessage = 'Upload failed. Please check your connection or server status.';
+      }
     });
   }
 }

@@ -45,12 +45,21 @@
       </ion-item>
     </ion-list>
   </ion-card-content>
+  <div class="button-container">
+    <ion-button 
+      (click)="uploadImages()" 
+      [disabled]="selectedFiles.length === 0 || isUploading"
+      class="fixed-upload-btn"
+      mode="ios">
+      <span *ngIf="!isUploading">
+        <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
+        Upload {{ selectedFiles.length > 0 ? selectedFiles.length : '' }} Images
+      </span>
+      <ion-spinner *ngIf="isUploading" name="crescent"></ion-spinner>
+    </ion-button>
+  </div>
+  <div class="status-container" *ngIf="errorMessage">
+    <ion-icon name="alert-circle-outline"></ion-icon>
+    <p>{{ errorMessage }}</p>
+  </div>
 </ion-card>
-<ion-button 
-  expand="block" 
-  color="success" 
-  [disabled]="selectedFiles.length === 0"
-  (click)="uploadImages()">
-  <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
-  Upload to Server
-</ion-button>
