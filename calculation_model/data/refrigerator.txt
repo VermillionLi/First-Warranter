@@ -1,0 +1,52 @@
+Document Title: Refrigerator Extended Warranty Price Comparison
+Columns:
+ Provider or Brand
+ Coverage Type
+ Coverage Length
+ Typical Price
+Data:
+Whirlpool (Manufacturer)
+ Coverage Type: Extended Service Plan
+ Coverage Length: 1 year extension
+ Typical Price: Approximately 60 to 120 dollars per year depending on refrigerator model
+Samsung (Manufacturer)
+ Coverage Type: Extended Protection Plan
+ Coverage Length: 2 to 5 years
+ Typical Price: Approximately 150 to 350 dollars total depending on refrigerator price tier
+LG (Manufacturer)
+ Coverage Type: Extended Service Plan
+ Coverage Length: 2 to 5 years
+ Typical Price: Approximately 140 to 320 dollars total depending on model and capacity
+Bosch (Manufacturer)
+ Coverage Type: Extended Warranty
+ Coverage Length: Variable up to 5 years
+ Typical Price: Quote required; commonly estimated 200 to 400 dollars depending on refrigerator model
+Home Depot
+ Coverage Type: Retail Protection Plan
+ Coverage Length: 3 years
+ Typical Price: Approximately 140 dollars for refrigerators priced between 1000 and 1499 dollars
+Home Depot
+ Coverage Type: Retail Protection Plan
+ Coverage Length: 5 years
+ Typical Price: Approximately 220 to 300 dollars for refrigerators priced between 1000 and 2000 dollars
+Lowe's
+ Coverage Type: Retail Protection Plan
+ Coverage Length: 3 years
+ Typical Price: Approximately 160 dollars depending on refrigerator price
+Lowe's
+ Coverage Type: Retail Protection Plan
+ Coverage Length: 5 years
+ Typical Price: Approximately 250 to 350 dollars depending on refrigerator price
+Best Buy (Geek Squad)
+ Coverage Type: Appliance Protection Plan
+ Coverage Length: 5 years
+ Typical Price: Approximately 300 to 450 dollars depending on refrigerator price and features
+Upsie (Third Party)
+ Coverage Type: Extended Warranty
+ Coverage Length: 3 years
+ Typical Price: Approximately 150 to 220 dollars for refrigerators around 1200 dollars
+Upsie (Third Party)
+ Coverage Type: Extended Warranty
+ Coverage Length: 5 years
+ Typical Price: Approximately 250 to 380 dollars for refrigerators around 1500 dollars
+

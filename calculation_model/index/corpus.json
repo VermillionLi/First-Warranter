@@ -1,0 +1,32 @@
+[
+  {
+    "source": "data/all other things.txt",
+    "chunk_id": 0,
+    "text": "all other appliances warranty:\n\nfor all other items, just return 0$"
+  },
+  {
+    "source": "data/dishwasher.txt",
+    "chunk_id": 0,
+    "text": "Dishwasher\nDocument Title: Dishwasher Extended Warranty Price Comparison\n\n\nColumns:\n Provider or Brand\n Coverage Type\n Coverage Length\n Typical Price\n\nData:\nWhirlpool (Manufacturer)\n Coverage Type: Extended Service Plan\n Coverage Length: 1 year\n Typical Price: 43 to 82 dollars per year\nHome Depot\n Coverage Type: Retail Protection Plan\n Coverage Length: 3 years\n Typical Price: Approximately 105 dollars for appliances priced between 700 and 999 dollars\nHome Depot\n Coverage Type: Retail Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 160 dollars for appliances priced between 700 and 999 dollars\nLowes\n Coverage Type: Retail Protection Plan\n Coverage Length: 3 years\n Typical Price: Approximately 130 dollars depending on appliance price\nLowes\n Coverage Type: Retail Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 200 dollars depending on appliance"
+  },
+  {
+    "source": "data/dishwasher.txt",
+    "chunk_id": 1,
+    "text": "ppliance price\nLowes\n Coverage Type: Retail Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 200 dollars depending on appliance price\nBest Buy (Geek Squad)\n Coverage Type: Retail Service Plan\n Coverage Length: 5 years\n Typical Price: Approximately 300 dollars based on older plan example\nUpsie (Third Party)\n Coverage Type: Extended Warranty\n Coverage Length: 3 years\n Typical Price: Approximately 98.99 dollars for an 849 dollar dishwasher example\nUpsie (Third Party)\n Coverage Type: Extended Warranty\n Coverage Length: 5 years\n Typical Price: Approximately 154.99 dollars for an 849 dollar dishwasher example\nBosch (Manufacturer)\n Coverage Type: Extended Warranty\n Coverage Length: Variable\n Typical Price: Quote required"
+  },
+  {
+    "source": "data/refrigerator.txt",
+    "chunk_id": 0,
+    "text": "Document Title: Refrigerator Extended Warranty Price Comparison\nColumns:\n Provider or Brand\n Coverage Type\n Coverage Length\n Typical Price\nData:\nWhirlpool (Manufacturer)\n Coverage Type: Extended Service Plan\n Coverage Length: 1 year extension\n Typical Price: Approximately 60 to 120 dollars per year depending on refrigerator model\nSamsung (Manufacturer)\n Coverage Type: Extended Protection Plan\n Coverage Length: 2 to 5 years\n Typical Price: Approximately 150 to 350 dollars total depending on refrigerator price tier\nLG (Manufacturer)\n Coverage Type: Extended Service Plan\n Coverage Length: 2 to 5 years\n Typical Price: Approximately 140 to 320 dollars total depending on model and capacity\nBosch (Manufacturer)\n Coverage Type: Extended Warranty\n Coverage Length: Variable up to 5 years\n Typical Price: Quote required; commonly estimated 200 to 400 dollars depending on refrigerator model\nHome Depo"
+  },
+  {
+    "source": "data/refrigerator.txt",
+    "chunk_id": 1,
+    "text": "overage Length: Variable up to 5 years\n Typical Price: Quote required; commonly estimated 200 to 400 dollars depending on refrigerator model\nHome Depot\n Coverage Type: Retail Protection Plan\n Coverage Length: 3 years\n Typical Price: Approximately 140 dollars for refrigerators priced between 1000 and 1499 dollars\nHome Depot\n Coverage Type: Retail Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 220 to 300 dollars for refrigerators priced between 1000 and 2000 dollars\nLowe's\n Coverage Type: Retail Protection Plan\n Coverage Length: 3 years\n Typical Price: Approximately 160 dollars depending on refrigerator price\nLowe's\n Coverage Type: Retail Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 250 to 350 dollars depending on refrigerator price\nBest Buy (Geek Squad)\n Coverage Type: Appliance Protection Plan\n Coverage Length: 5 years\n Typical Price: A"
+  },
+  {
+    "source": "data/refrigerator.txt",
+    "chunk_id": 2,
+    "text": "50 dollars depending on refrigerator price\nBest Buy (Geek Squad)\n Coverage Type: Appliance Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 300 to 450 dollars depending on refrigerator price and features\nUpsie (Third Party)\n Coverage Type: Extended Warranty\n Coverage Length: 3 years\n Typical Price: Approximately 150 to 220 dollars for refrigerators around 1200 dollars\nUpsie (Third Party)\n Coverage Type: Extended Warranty\n Coverage Length: 5 years\n Typical Price: Approximately 250 to 380 dollars for refrigerators around 1500 dollars"
+  }
+]

@@ -1,0 +1,3 @@
+all other appliances warranty:
+
+for all other items, just return 0$

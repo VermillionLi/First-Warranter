@@ -6,6 +6,7 @@ const {template, testImage, generateDescriptions} = require("./Gemini_API");
 const {extname, join} = require("node:path");
 const { readdir, unlink, access , mkdir} = require('fs/promises');
 const e = require("express");
+const {askRAG} = require("./Ollama_API");
 let imageNumber = 0
 
 // Allow requests from Ionic frontend
@@ -117,6 +118,12 @@ app.get('/testImage', async (req, res) => {
 
 app.get('/testMultipleImages', async (req, res) => {
     const data = await generateDescriptions()
+    res.status(200).send(data)
+});
+
+
+app.get('/testRAG', async (req, res) => {
+    const data = await askRAG("tell me about UCI")
     res.status(200).send(data)
 });
 

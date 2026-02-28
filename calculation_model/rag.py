@@ -254,7 +254,7 @@ class RAGBot:
         data = resp.json()
         return data["message"]["content"].strip()
 
-    def answer(self, question: str) -> Tuple[str, List[Dict[str, Any]]]:
+    def answer(self, question: str):
         """
         Convenience method that runs the full RAG pipeline for one question.
 
@@ -274,4 +274,4 @@ class RAGBot:
         retrieved = self.retrieve(question)
         context = self.build_context(retrieved)
         answer = self.generate(question, context)
-        return answer, retrieved
+        return answer

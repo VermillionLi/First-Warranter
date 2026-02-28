@@ -1,7 +1,10 @@
 # api.py
+import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
-from ragbot import RAGBot  # wherever your class lives
+from rag import RAGBot
+
+
 
 app = FastAPI()
 bot = RAGBot()
@@ -9,10 +12,12 @@ bot = RAGBot()
 class QuestionRequest(BaseModel):
     question: str
 
-@app.post("/ask")
-def ask_question(req: QuestionRequest):
-    answer, retrieved = bot.answer(req.question)
+@app.post("/test")
+def test_question(req: QuestionRequest):
+    answer = bot.answer(req.question)
     return {
-        "answer": answer,
-        "sources": retrieved
+        "answer": answer
     }
+
+if __name__ == '__main__':
+    uvicorn.run(app, host="127.0.0.1", port=8000)
