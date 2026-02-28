@@ -1,0 +1,6 @@
+onlyBuiltDependencies:
+  - '@angular/cli'
+  - core-js
+  - esbuild
+  - fsevents
+  - nice-napi
