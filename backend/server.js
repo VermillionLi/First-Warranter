@@ -4,7 +4,25 @@ const multer = require('multer');
 const app = express();
 const {template} = require("./API_functions");
 const {testImage} = require("./API_functions")
-const upload = multer({ dest: 'uploads/' });
+const {extname} = require("node:path");
+const {unlink} = require("node:fs");
+
+let image_number = 0
+
+
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads/'); // Directory to save files
+    },
+    filename: (req, file, cb) => {
+        const ext = extname(file.originalname); // Preserve original extension
+        cb(null, `${image_number}${ext}`); // Unique filename
+        image_number++
+    }
+});
+
+const upload = multer({ storage });
 
 // Allow requests from Ionic frontend
 app.use(cors({
@@ -16,7 +34,8 @@ app.use(cors({
 app.use(express.json());
 
 app.post('/api/upload', upload.array('images'), (req, res) => {
-  console.log('Received files:', req.files);
+    image_number = 0
+    console.log('Received files:', req.files);
   res.json({ message: 'Files uploaded successfully!', count: req.files.length });
 });
 
