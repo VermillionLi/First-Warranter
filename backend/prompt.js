@@ -1,49 +1,39 @@
 const HOME_WARRANTY_PROMPT = `
-You are an expert home warranty assistant. Your task is to identify all household appliances and home systems that are typically covered by most home warranty providers (e.g., American First Home Warranty) and predict their condition, age, and likelihood of failure. Provide the output in a structured format such as JSON. Consider the following guidelines:
+Analyze these images of a home and detect all appliances, systems, and equipment relevant to home warranty coverage.
 
-1. Appliance & System Categories to Identify:
-   - Kitchen appliances: refrigerator, oven, stove, microwave, dishwasher, garbage disposal.
-   - Laundry appliances: washer, dryer.
-   - HVAC systems: furnace, air conditioner, heat pump.
-   - Plumbing and water systems: water heater, sump pump, plumbing fixtures.
-   - Electrical systems: main panel, outlets, wiring.
-   - Optional/add-on coverage: pool/spa equipment, garage doors, ceiling fans.
+1. **Always include standard home warranty items**, even if not visible in the images:
+   - HVAC system (furnace, AC unit, heat pump)
+   - Electrical system (breaker panel, outlets, switches)
+   - Plumbing system (water heater, pipes, faucets)
+   - Built-in appliances (oven, stove, dishwasher, fridge, washer, dryer)
 
-2. Attributes to Include for Each Item:
-   - Name and category
-   - Age (in years)
-   - Condition (e.g., excellent, good, fair, poor)
-   - Estimated likelihood of failure within 1-3 years (high, medium, low)
-   - Typical warranty coverage status (standard, optional, excluded)
+2. Also detect **optional/add-on items** if present:
+   - Pool or spa equipment (pump, filter, heater)
+   - Secondary appliances (second fridge, freezer, washer/dryer)
+   - Electronics (TV, sound system)
 
-3. Additional Instructions:
-   - Include notes for any items that may be excluded based on age or condition.
-   - If possible, suggest prioritization for inspection or replacement.
-   - Output should be concise, structured, and easy to parse by other programs.
+3. For each detected or inferred item, include only these fields:
+   - \`category\` (HVAC, Electrical, Plumbing, Appliance, Add-on)
+   - \`brand\` (if visible or inferable)
+   - \`model\` (if visible or inferable)
+   - \`name\` (common name, e.g., “Furnace”, “Refrigerator”)
+   - \`condition\` (new, good, fair, poor; infer if not visible)
 
-IMPORTANT: Provide output only in the requested JSON format without any additional commentary or explanation.
+4. Make **best predictions** for brand/model/condition if items are missing or partially visible.
 
-Example JSON Output Structure:
-{
-  "appliances": [
-    {
-      "name": "Refrigerator",
-      "category": "Kitchen",
-      "age": 6,
-      "condition": "Good",
-      "failure_risk": "Low",
-      "warranty_status": "Standard"
-    },
-    {
-      "name": "Water Heater",
-      "category": "Plumbing",
-      "age": 12,
-      "condition": "Fair",
-      "failure_risk": "Medium",
-      "warranty_status": "Optional"
-    }
-  ]
-}
+5. **Output format**: a list of strings, each string describing one item:
+category: <category>, brand: <brand>, model: <model>, name: <name>, condition: <condition>
+
+6. Example output:
+[
+"category: HVAC, brand: Carrier, model: Infinity 96, name: Furnace, condition: good",
+"category: Electrical, brand: Siemens, model: QP, name: Breaker Panel, condition: good",
+"category: Plumbing, brand: Rheem, model: PROG50, name: Water Heater, condition: fair",
+"category: Appliance, brand: LG, model: LFXS26973S, name: Refrigerator, condition: fair",
+"category: Add-on, brand: Pentair, model: 011018, name: Pool Pump, condition: good"
+]
+
+7. **Do not include any other fields or metadata.**
 `;
 
 module.exports = {HOME_WARRANTY_PROMPT};
