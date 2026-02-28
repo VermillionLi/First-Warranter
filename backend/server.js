@@ -72,11 +72,15 @@ app.post(
         }
     },
     upload.array('images'),
-    (req, res) => {
+    async (req, res) => {
         console.log('Received files:', req.files);
+        model_response = await generateDescriptions();
+        
+
         res.status(200).json({
             message: 'Files uploaded successfully!',
-            count: req.files.length
+            count: req.files.length,
+            model_response: model_response.text
         });
     }
 );
