@@ -1,7 +1,7 @@
 {
-  "name": "Photo Gallery NG Capacitor",
+  "name": "frontend",
   "integrations": {
     "capacitor": {}
   },
-  "type": "angular"
+  "type": "angular-standalone"
 }
