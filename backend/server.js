@@ -43,6 +43,7 @@ async function sanitize_upload_folder() {
     }
 }
 
+//upload folder functions
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -57,6 +58,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage});
 
+
+//api handling
 app.post(
     '/api/upload',
     async (req, res, next) => {
