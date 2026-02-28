@@ -3,6 +3,7 @@ config();
 import { GoogleGenAI } from "@google/genai";
 import * as fs from "node:fs";
 import {HOME_WARRANTY_PROMPT} from './prompt.js'
+import { text } from "node:stream/consumers";
 
 export const GEMINI_API_KEY = process.env.GEMINI_API_KEY
 
@@ -45,5 +46,28 @@ async function testImage() {
     return response
 }
 
+async function generateDescriptions(){
+    var apiContents = [{text: HOME_WARRANTY_PROMPT}]
+    const files = fs.readdirSync("./uploads")
+    files.forEach(file => {
+        const image = fs.readFileSync(`./uploads/${file}`, {encoding: "base64"})
+        const contentPart = {
+            inlineData: {
+                mimeType: "image/jpeg",
+                data: image
+            }
+        }
 
-export {template, testImage};
+        apiContents.push(contentPart)
+    });
+
+    const response = await ai.models.generateContent({
+        model: "gemini-3-flash-preview",
+        contents: apiContents,
+    });
+    return response
+
+}
+
+
+export {template, testImage, generateDescriptions};

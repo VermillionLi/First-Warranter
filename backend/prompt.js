@@ -13,7 +13,7 @@ You are an expert home warranty assistant. Your task is to identify all househol
    - Name and category
    - Age (in years)
    - Condition (e.g., excellent, good, fair, poor)
-   - Estimated likelihood of failure within 1–3 years (high, medium, low)
+   - Estimated likelihood of failure within 1-3 years (high, medium, low)
    - Typical warranty coverage status (standard, optional, excluded)
 
 3. Additional Instructions:
