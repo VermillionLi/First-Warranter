@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 export interface ServerMessages {
   [key: string]: string[];
@@ -9,17 +9,32 @@ export interface ServerMessages {
   providedIn: 'root',
 })
 export class DataService {
-  private messageSource = new BehaviorSubject<ServerMessages | null>(null);
-
+  private masterDict: ServerMessages = {};
+  
+  private messageSource = new BehaviorSubject<ServerMessages>({});
   messages$ = this.messageSource.asObservable();
 
-  constructor() {}
+  handleIncomingMessage(newMessages: ServerMessages) {
+    // TEMP: stops if receives "complete"
+    if (newMessages['status']?.includes('complete')) {
+      console.log("Process Finished.");
+      return;
+    }
 
-  updateMessages(newMessages: ServerMessages) {
-    this.messageSource.next(newMessages);
+    Object.keys(newMessages).forEach(key => {
+      if (this.masterDict[key]) {
+        const combined = [...this.masterDict[key], ...newMessages[key]];
+        this.masterDict[key] = Array.from(new Set(combined)); 
+      } else {
+        this.masterDict[key] = [...newMessages[key]];
+      }
+    });
+
+    this.messageSource.next({ ...this.masterDict });
   }
 
-  clearMessages() {
-    this.messageSource.next(null);
+  resetData() {
+    this.masterDict = {};
+    this.messageSource.next({});
   }
 }
