@@ -13,8 +13,7 @@ app.use(cors({
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    // use this once the actual server gets running res.sendFile(path.join(__dirname, '../frontend/src/index.html'));
-    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+    res.sendFile(path.join(__dirname, '../frontend/www/index.html'));
 });
 
 app.listen(3000, () => console.log('Backend running on port 3000'));
