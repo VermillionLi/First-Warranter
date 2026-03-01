@@ -272,4 +272,5 @@ class RAGBot:
         retrieved = self.retrieve(question)
         context = self.build_context(retrieved)
         answer = self.generate(question, context)
+        print(context)
         return answer

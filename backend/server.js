@@ -126,7 +126,7 @@ app.get('/testMultipleImages', async (req, res) => {
 
 
 app.get('/testRAG', async (req, res) => {
-    const data = await askRAG("tell me about UCI")
+    const data = await askRAG("pool, quite large, circular, with slide")
     res.status(200).send(data)
 });
 
