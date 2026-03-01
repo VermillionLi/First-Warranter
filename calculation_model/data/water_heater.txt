@@ -1,0 +1,77 @@
+Document Title: Water Heater Extended Warranty Price Comparison
+Columns:
+Provider or Brand
+
+
+Coverage Type
+
+
+Coverage Length
+
+
+Typical Price
+
+
+Data:
+Rheem (Manufacturer)
+Coverage Type: Manufacturer Extended Service Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $20–$60 per year
+
+
+A. O. Smith (Manufacturer)
+Coverage Type: Manufacturer Extended Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $24–$70 per year
+
+
+Bradford White (Manufacturer)
+Coverage Type: Extended Limited Warranty
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $30–$80 per year
+
+
+Navien (Manufacturer)
+Coverage Type: Extended Service Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $40–$100 per year
+
+
+Home Depot
+Coverage Type: Retail Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $50–$90 per year
+
+
+Lowe's
+Coverage Type: Retail Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $57–$100 per year
+
+
+
+

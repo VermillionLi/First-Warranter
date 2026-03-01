@@ -1,0 +1,78 @@
+Document Title: Residential Electrical System Extended Warranty Price Comparison
+Columns:
+Provider or Brand
+
+
+Coverage Type
+
+
+Coverage Length
+
+
+Typical Price
+
+
+Data:
+Square D (Schneider Electric) (Manufacturer)
+Coverage Type: Extended Service Plan / Limited Warranty
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $30–$80 per year
+
+
+Siemens (Manufacturer)
+Coverage Type: Extended Warranty / Service Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $40–$90 per year
+
+
+Eaton (Manufacturer)
+Coverage Type: Extended Limited Warranty
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $30–$80 per year
+
+
+Leviton (Manufacturer)
+Coverage Type: Extended Warranty / Service Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $20–$60 per year
+
+
+Home Depot
+Coverage Type: Retail Protection Plan (electrical panels, breakers, wiring)
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $33–$70 per year
+
+
+Lowe's
+Coverage Type: Retail Protection Plan (electrical systems)
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $40–$80 per year
+
+
+
+
+
