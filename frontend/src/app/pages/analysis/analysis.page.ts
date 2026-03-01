@@ -7,6 +7,7 @@ import {DataService} from "../../services/data-service";
 import {Router} from "@angular/router";
 import { ImageCarouselComponent } from 'src/app/components/image-carousel/image-carousel.component';
 import { LoadingComponent } from 'src/app/components/loading/loading.component';
+// import { ApplianceBoxComponent } from 'src/app/components/appliance-box/appliance-box.component';
 
 @Component({
   selector: 'app-analysis',

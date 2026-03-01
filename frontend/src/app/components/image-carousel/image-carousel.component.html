@@ -1,3 +1,14 @@
-<p>
-  image-carousel works!
-</p>
+<div class="carousel-container">
+  <swiper-container 
+    #swiperRef
+    navigation="true" 
+    pagination="true" 
+    class="main-swiper">
+    
+    <swiper-slide *ngFor="let img of images">
+      <div class="image-box">
+        <img [src]="img" />
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</div>
