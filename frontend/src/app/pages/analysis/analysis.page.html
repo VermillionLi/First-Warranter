@@ -1,8 +1,21 @@
 <ion-content>
-  <app-image-carousel></app-image-carousel>
-  <app-loading></app-loading>
+  <img class="background" src="assets/dotted-structure.png" aria-hidden="true">
+  <div class="responsive-grid">
+    <div class="grid-item">
+      <div>
+        <h1>what we see</h1>
+        <div class="carousel-container">
+          <app-image-carousel></app-image-carousel>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <app-image-upload></app-image-upload>
+    </div>
+  </div>
+  <!-- <app-loading></app-loading>
   <app-appliance-box>
     [mainLabel]="'Appliances and Systems'"
     [items]="applianceItems">
-    </app-appliance-box>
+  </app-appliance-box> -->
 </ion-content>

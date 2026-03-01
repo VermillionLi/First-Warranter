@@ -6,9 +6,10 @@ import {HttpClient} from "@angular/common/http";
 import {DataService} from "../../services/data-service";
 import {Router} from "@angular/router";
 import { ImageCarouselComponent } from 'src/app/components/image-carousel/image-carousel.component';
-import { LoadingComponent } from 'src/app/components/loading/loading.component';
-import {ApplianceBoxComponent} from "../../components/appliance-box/appliance-box.component";
+// import { LoadingComponent } from 'src/app/components/loading/loading.component';
+// import {ApplianceBoxComponent} from "../../components/appliance-box/appliance-box.component";
 import {constructOutline} from "ionicons/icons";
+import { ImageUploadComponent } from 'src/app/components/image-upload/image-upload.component';
 
 @Component({
   selector: 'app-analysis',
@@ -16,7 +17,9 @@ import {constructOutline} from "ionicons/icons";
   styleUrls: ['./analysis.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,
-    ImageCarouselComponent, LoadingComponent, ApplianceBoxComponent
+    ImageCarouselComponent, 
+    // LoadingComponent, ApplianceBoxComponent, 
+    ImageUploadComponent
   ]
 })
 export class AnalysisPage implements OnInit {

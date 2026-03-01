@@ -1,5 +1,5 @@
 .carousel-container {
-    overflow: hidden;
+    // width: 100%;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     border: solid 1px white;
     margin: 10px;
@@ -8,7 +8,7 @@
 .main-swiper {
     width: 100%;
     aspect-ratio: 16 / 9;
-
+    max-width: 70vh;
     --swiper-navigation-color: #DDFF02;
     --swiper-pagination-color: #F85DF9;
     --swiper-navigation-size: 5%;
@@ -35,5 +35,21 @@
         backdrop-filter: blur(5px);
         padding: 25px 15px;
         border-radius: 8px;
+    }
+}
+
+.star-deco-1 {
+    position: absolute;
+    width: 10vh;
+    z-index: 1;
+
+    @media (orientation: landscape) {
+        top: 15%;
+        right: 53%;
+    }
+    
+    @media (orientation: portrait) {
+        top: 5%;
+        right: 1%;
     }
 }
