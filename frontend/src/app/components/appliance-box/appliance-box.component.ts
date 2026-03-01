@@ -1,7 +1,8 @@
 import { Component, OnInit, Input} from '@angular/core';
 
 
-export interface ApplianceItem { 
+export interface ApplianceItem {
+    name: string;
     description: string;
     price: number,
 }
@@ -13,6 +14,7 @@ export interface ApplianceItem {
 export class ApplianceBoxComponent  implements OnInit {
     @Input() mainLabel: string = "Appliances and Systems";
     @Input() items: ApplianceItem[] = [];
+
 
   constructor() { }
 
