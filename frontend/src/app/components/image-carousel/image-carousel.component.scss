@@ -1,7 +1,4 @@
 .carousel-container {
-    // width: 100%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    border: solid 1px white;
     margin: 10px;
 }
 
@@ -9,6 +6,7 @@
     width: 100%;
     aspect-ratio: 16 / 9;
     max-width: 70vh;
+    border: solid 1px white;
     --swiper-navigation-color: #DDFF02;
     --swiper-pagination-color: #F85DF9;
     --swiper-navigation-size: 5%;
