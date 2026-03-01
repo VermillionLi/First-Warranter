@@ -1,0 +1,39 @@
+.carousel-container {
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: solid 1px white;
+    margin: 10px;
+}
+
+.main-swiper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    --swiper-navigation-color: #DDFF02;
+    --swiper-pagination-color: #F85DF9;
+    --swiper-navigation-size: 5%;
+    --swiper-pagination-bullet-size: 10px;
+}
+
+.image-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        object-position: center;
+        display: block;
+    }
+}
+
+::ng-deep {
+    .swiper-button-next, .swiper-button-prev {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        padding: 25px 15px;
+        border-radius: 8px;
+    }
+}
