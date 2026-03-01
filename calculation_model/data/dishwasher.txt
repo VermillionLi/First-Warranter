@@ -7,7 +7,7 @@ Columns:
  Coverage Type
  Coverage Length
  Typical Price
-
+mn
 Data:
 Whirlpool (Manufacturer)
  Coverage Type: Extended Service Plan

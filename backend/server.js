@@ -123,10 +123,32 @@ app.get('/testMultipleImages', async (req, res) => {
 
 
 app.get('/testRAG', async (req, res) => {
-    const data = await askRAG("tell me about UCI")
+    const data = await askRAG("a rusty dishwasher, likely from Bosch")
     res.status(200).send(data)
 });
 
+app.get('/testPipeline', async (req, res) => {
+    let img_disc = await generateDescriptions()
+    if (typeof img_disc === 'string') {
+      img_disc = img_disc
+        .replace(/```(?:json)?\n?/g, '') // remove starting ```json or ```
+        .replace(/```/g, '')             // remove ending ```
+        .trim();
+      img_disc = JSON.parse(img_disc);
+    }
+    console.log('Parsed descriptions:', img_disc);
+    let result = []
+    for (const key in img_disc) {
+      if (img_disc.hasOwnProperty(key)) {
+        const disc = img_disc[key];
+        console.log(disc)
+        const price = await askRAG(disc)
+        console.log('price', price)
+        result.push(price)
+      }
+    }
+    res.status(200).send(result)
+});
 
 
 

@@ -6,6 +6,7 @@ import numpy as np
 import faiss
 import requests
 from sentence_transformers import SentenceTransformer
+from prompt import role, behavior
 
 
 # Where ingest.py saved the FAISS index + the corpus metadata
@@ -215,17 +216,14 @@ class RAGBot:
         # SYSTEM message sets behavior rules for the LLM.
         # This is where we "force" grounding.
         system = (
-            "You are a UC Irvine tour guide assistant.\n"
-            "You must answer using ONLY the provided context.\n"
-            "If the answer is not in the context, say: "
-            "\"I don't know based on the provided tour info.\""
+            role
         )
 
         # USER message includes the retrieved context and the actual question.
         user = (
             f"CONTEXT:\n{context}\n\n"
             f"QUESTION:\n{question}\n\n"
-            "Answer clearly and concisely. If useful, give 1-2 quick tips."
+            f"{behavior}"
         )
 
         # Ollama /api/chat uses a chat-style JSON format.
