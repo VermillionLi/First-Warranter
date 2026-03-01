@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import {
   IonCard,
   IonCardContent,
@@ -41,7 +42,7 @@ export class ImageUploadComponent {
   selectedFiles: File[] = [];
   previews: { url: string; name: string; size: number }[] = [];
 
-  constructor(private http: HttpClient, private dataService: DataService) {
+  constructor(private http: HttpClient, private dataService: DataService, private router: Router) {
     addIcons({ alertCircleOutline, cloudUploadOutline, trashOutline, imagesOutline });
   }
 
@@ -125,6 +126,8 @@ export class ImageUploadComponent {
         console.log(`${res.count} files uploaded. Response:`, parsedResponse);
         this.isUploading = false;
         this.clearAll();
+        this.router.navigateByUrl('/analysis');
+        //call next function
       },
       error: (err) => {
         console.error('Upload failed', err)
@@ -133,4 +136,5 @@ export class ImageUploadComponent {
       }
     });
   }
+
 }

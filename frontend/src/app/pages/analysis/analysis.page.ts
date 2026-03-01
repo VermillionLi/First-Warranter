@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import {HttpClient} from "@angular/common/http";
+import {DataService} from "../../services/data-service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-analysis',
@@ -12,9 +15,13 @@ import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/stan
 })
 export class AnalysisPage implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private dataService: DataService, private router: Router) { }
 
   ngOnInit() {
+
   }
 
+  create_appliance_fields(){
+
+  }
 }
