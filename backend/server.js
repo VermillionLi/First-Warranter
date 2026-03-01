@@ -83,7 +83,6 @@ app.post(
         .replace(/```/g, '')             // remove ending ```
         .trim();
         }
-        img_disc = JSON.parse(img_disc);
 
         res.status(200).send(img_disc)
     }
