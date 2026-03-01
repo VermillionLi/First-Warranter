@@ -76,6 +76,7 @@ app.post(
     async (req, res) => {
         console.log('Received files:', req.files);
         let model_response = await generateDescriptions();
+        console.log("Model response:", model_response)
         if (typeof model_response === 'string') {
         model_response = model_response
         .replace(/```(?:json)?\n?/g, '') // remove starting ```json or ```
