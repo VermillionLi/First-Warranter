@@ -62,6 +62,8 @@ export class ApplianceBoxComponent implements OnInit {
   async handleNumbers() {
     const img_dict = this.dataService.getMasterDict()
     console.log("managed to get master dict: " + Object.keys(img_dict).length)
+
+    let totalPrice = 0;
     for (const key in img_dict) {
       const input = key + ', ' + img_dict[key]
       console.log("this is input to ollama: " + input)
@@ -71,6 +73,7 @@ export class ApplianceBoxComponent implements OnInit {
         const item = this.items.find(i => i.name === key)
         if (item){
           item.price = price.toString()
+            totalPrice += price;
         }
     });   
     //   const something = this.sendProcesses(key + ", " + img_dict[key])
@@ -80,6 +83,12 @@ export class ApplianceBoxComponent implements OnInit {
     //   }
     //   Object.assign({name: item, description: img_dict[key], something});
     }
+
+    this.items.push({
+      name: "🟩Total Estimated Cost",
+      description: "",
+      price: totalPrice.toString()
+    })
   }
 
 
