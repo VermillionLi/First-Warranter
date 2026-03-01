@@ -13,5 +13,7 @@ export class ApplianceStateService {
     if (!box) return;
     box.items = newItems;
   }
+
+
 }
 

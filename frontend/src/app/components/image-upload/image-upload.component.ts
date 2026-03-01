@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
-import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core';
+import {environment} from 'src/environments/environment';
+import {CommonModule} from '@angular/common';
+import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 import {
   IonCard,
   IonCardContent,
@@ -14,14 +14,14 @@ import {
   IonButton,
   IonSpinner
 } from '@ionic/angular/standalone';
-import { addIcons } from 'ionicons';
+import {addIcons} from 'ionicons';
 import {
   alertCircleOutline,
   cloudUploadOutline,
   trashOutline,
   imagesOutline
 } from 'ionicons/icons';
-import { JSDocComment } from '@angular/compiler';
+import {JSDocComment} from '@angular/compiler';
 import {DataService} from "../../services/data-service";
 
 @Component({
@@ -29,7 +29,6 @@ import {DataService} from "../../services/data-service";
   templateUrl: './image-upload.component.html',
   styleUrls: ['./image-upload.component.scss'],
   standalone: true,
-  providers: [DataService],
   imports: [
     CommonModule, IonCard, IonCardContent, IonIcon,
     IonList, IonItem, IonThumbnail, IonLabel, IonButton, IonSpinner
@@ -43,7 +42,7 @@ export class ImageUploadComponent {
   previews: { url: string; name: string; size: number }[] = [];
 
   constructor(private http: HttpClient, private dataService: DataService, private router: Router) {
-    addIcons({ alertCircleOutline, cloudUploadOutline, trashOutline, imagesOutline });
+    addIcons({alertCircleOutline, cloudUploadOutline, trashOutline, imagesOutline});
   }
 
   onDragOver(event: DragEvent) {
@@ -114,20 +113,21 @@ export class ImageUploadComponent {
     });
 
     type uploadResponse = {
-        message: string;
-        count: number;
-        model_response: string;
+      message: string;
+      count: number;
+      model_response: string;
     }
 
     this.http.post<uploadResponse>(`${environment.api_url}/api/upload`, formData).subscribe({
       next: (res) => {
+        console.log("image stuff processing: " + res.model_response)
         const parsedResponse = JSON.parse(res.model_response);
+        console.log(parsedResponse)
         this.dataService.setIncomingMessage(parsedResponse)
         console.log(`${res.count} files uploaded. Response:`, parsedResponse);
         this.isUploading = false;
         this.clearAll();
         this.router.navigateByUrl('/analysis');
-        //call next function
       },
       error: (err) => {
         console.error('Upload failed', err)

@@ -8,6 +8,7 @@ import {Router} from "@angular/router";
 import { ImageCarouselComponent } from 'src/app/components/image-carousel/image-carousel.component';
 import { LoadingComponent } from 'src/app/components/loading/loading.component';
 import {ApplianceBoxComponent} from "../../components/appliance-box/appliance-box.component";
+import {constructOutline} from "ionicons/icons";
 
 @Component({
   selector: 'app-analysis',
@@ -23,12 +24,8 @@ export class AnalysisPage implements OnInit {
   constructor(private http: HttpClient, private dataService: DataService, private router: Router) { }
 
   ngOnInit() {
-    this.create_appliance_fields()
+    console.log("test in analysis")
   }
 
-  create_appliance_fields(){
-      for (const key in this.dataService.getMasterDict()){
 
-      }
-  }
 }

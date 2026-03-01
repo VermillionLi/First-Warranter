@@ -16,7 +16,9 @@ export class DataService {
 
   public setIncomingMessage(newMessages: ServerMessages) {
     // TEMP: stops if receives "complete"
+    console.log(newMessages)
     this.masterDict = newMessages
+    this.messageSource.next(this.masterDict);
   }
 
   public getMasterDict(){

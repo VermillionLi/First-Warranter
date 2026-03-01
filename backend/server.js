@@ -158,12 +158,12 @@ app.get('/testPipeline', async (req, res) => {
 });
 
 //full pipeline:
-app.get('/api/calculate', async (req, res) => {
-    const disc = req.body;
+app.post('/api/calculate', async (req, res) => {
+    const disc = req.body.description;
     console.log(disc)
     const price = await askRAG(disc)
     console.log('price', price)
-    res.status(200).send(price)
+    res.status(200).json({price})
 });
 
 
