@@ -3,7 +3,7 @@ import {
   ApplianceBoxComponent,
   ApplianceItem
 } from "../components/appliance-box/appliance-box.component";
-// @Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: 'root' })
 export class ApplianceStateService {
   boxes: ApplianceBoxComponent[] = []
 
