@@ -157,7 +157,7 @@ app.get('/testPipeline', async (req, res) => {
 });
 
 //full pipeline:
-app.get('/calculate', async (req, res) => {
+app.get('/api/calculate', async (req, res) => {
     const disc = req.body;
     console.log(disc)
     const price = await askRAG(disc)

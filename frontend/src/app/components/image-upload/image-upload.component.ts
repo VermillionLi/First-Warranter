@@ -2,33 +2,35 @@ import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { 
-  IonCard, 
-  IonCardContent, 
-  IonIcon, 
-  IonList, 
-  IonItem, 
-  IonThumbnail, 
-  IonLabel, 
+import {
+  IonCard,
+  IonCardContent,
+  IonIcon,
+  IonList,
+  IonItem,
+  IonThumbnail,
+  IonLabel,
   IonButton,
   IonSpinner
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
   alertCircleOutline,
-  cloudUploadOutline, 
-  trashOutline, 
-  imagesOutline 
+  cloudUploadOutline,
+  trashOutline,
+  imagesOutline
 } from 'ionicons/icons';
 import { JSDocComment } from '@angular/compiler';
+import {DataService} from "../../services/data-service";
 
 @Component({
   selector: 'app-image-upload',
   templateUrl: './image-upload.component.html',
   styleUrls: ['./image-upload.component.scss'],
   standalone: true,
+  providers: [DataService],
   imports: [
-    CommonModule, IonCard, IonCardContent, IonIcon, 
+    CommonModule, IonCard, IonCardContent, IonIcon,
     IonList, IonItem, IonThumbnail, IonLabel, IonButton, IonSpinner
   ]
 })
@@ -39,7 +41,7 @@ export class ImageUploadComponent {
   selectedFiles: File[] = [];
   previews: { url: string; name: string; size: number }[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private dataService: DataService) {
     addIcons({ alertCircleOutline, cloudUploadOutline, trashOutline, imagesOutline });
   }
 
@@ -70,11 +72,11 @@ export class ImageUploadComponent {
 
   private handleFiles(fileList: FileList) {
     const allowedTypes = ['image/png', 'image/jpeg', 'image/jpg'];
-    
+
     Array.from(fileList).forEach(file => {
       if (allowedTypes.includes(file.type)) {
         this.selectedFiles.push(file);
-        
+
         const reader = new FileReader();
         reader.onload = () => {
           this.previews.push({
@@ -119,6 +121,7 @@ export class ImageUploadComponent {
     this.http.post<uploadResponse>(`${environment.api_url}/api/upload`, formData).subscribe({
       next: (res) => {
         const parsedResponse = JSON.parse(res.model_response);
+        this.dataService.setIncomingMessage(parsedResponse)
         console.log(`${res.count} files uploaded. Response:`, parsedResponse);
         this.isUploading = false;
         this.clearAll();
