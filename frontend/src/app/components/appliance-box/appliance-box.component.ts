@@ -1,5 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {DataService, ServerMessages} from "../../services/data-service";
+import {CommonModule} from '@angular/common';
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../../environments/environment";
 import {Injectable} from '@angular/core';
@@ -22,8 +23,7 @@ export interface ApplianceItem {
     IonItem,
     IonLabel,
     IonSpinner,
-    NgForOf,
-    NgIf
+    CommonModule
   ],
 })
 
