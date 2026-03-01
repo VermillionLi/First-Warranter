@@ -65,7 +65,7 @@ async function generateDescriptions(){
         model: "gemini-3-flash-preview",
         contents: apiContents,
     });
-    return response
+    return response.text
 
 }
 

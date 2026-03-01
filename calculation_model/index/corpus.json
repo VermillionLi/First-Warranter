@@ -7,26 +7,121 @@
   {
     "source": "data/dishwasher.txt",
     "chunk_id": 0,
-    "text": "Dishwasher\nDocument Title: Dishwasher Extended Warranty Price Comparison\n\n\nColumns:\n Provider or Brand\n Coverage Type\n Coverage Length\n Typical Price\n\nData:\nWhirlpool (Manufacturer)\n Coverage Type: Extended Service Plan\n Coverage Length: 1 year\n Typical Price: 43 to 82 dollars per year\nHome Depot\n Coverage Type: Retail Protection Plan\n Coverage Length: 3 years\n Typical Price: Approximately 105 dollars for appliances priced between 700 and 999 dollars\nHome Depot\n Coverage Type: Retail Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 160 dollars for appliances priced between 700 and 999 dollars\nLowes\n Coverage Type: Retail Protection Plan\n Coverage Length: 3 years\n Typical Price: Approximately 130 dollars depending on appliance price\nLowes\n Coverage Type: Retail Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 200 dollars depending on appliance"
+    "text": "Document Title: Dishwasher Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\n=======\n Provider or Brand\n Coverage Type\n Coverage Length\n Typical Price\n\nData:\nWhirlpool (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $43–$82 per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price:$32 - $35 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price:$40 - $43 per year \n\n\nBest Buy (Geek Squad)\nCoverage Type: Retail Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $60 per year\n\n\nUpsie (Third Party)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $31 - $32.99 per year (3-year example plan)"
   },
   {
-    "source": "data/dishwasher.txt",
+    "source": "data/electrical_system.txt",
+    "chunk_id": 0,
+    "text": "Document Title: Residential Electrical System Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nSquare D (Schneider Electric) (Manufacturer)\nCoverage Type: Extended Service Plan / Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$80 per year\n\n\nSiemens (Manufacturer)\nCoverage Type: Extended Warranty / Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $40–$90 per year\n\n\nEaton (Manufacturer)\nCoverage Type: Extended Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$80 per year\n\n\nLeviton (Manufacturer)\nCoverage Type: Extended Warranty / Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $20–$60 per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan (electrical panels, breakers, wiring)\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $33–$70 per year\n\n\nLowe's\nCoverage Type: Retail Pro"
+  },
+  {
+    "source": "data/electrical_system.txt",
     "chunk_id": 1,
-    "text": "ppliance price\nLowes\n Coverage Type: Retail Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 200 dollars depending on appliance price\nBest Buy (Geek Squad)\n Coverage Type: Retail Service Plan\n Coverage Length: 5 years\n Typical Price: Approximately 300 dollars based on older plan example\nUpsie (Third Party)\n Coverage Type: Extended Warranty\n Coverage Length: 3 years\n Typical Price: Approximately 98.99 dollars for an 849 dollar dishwasher example\nUpsie (Third Party)\n Coverage Type: Extended Warranty\n Coverage Length: 5 years\n Typical Price: Approximately 154.99 dollars for an 849 dollar dishwasher example\nBosch (Manufacturer)\n Coverage Type: Extended Warranty\n Coverage Length: Variable\n Typical Price: Quote required"
+    "text": "l Protection Plan (electrical panels, breakers, wiring)\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $33–$70 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan (electrical systems)\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $40–$80 per year"
+  },
+  {
+    "source": "data/faucet.txt",
+    "chunk_id": 0,
+    "text": "Document Title: Faucet Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nMoen (Manufacturer)\nCoverage Type: Extended Service Plan / Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $50–$150 per faucet per year\n\n\nDelta Faucet (Manufacturer)\nCoverage Type: Extended Warranty / Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $60–$180 per faucet per year\n\n\nKohler (Manufacturer)\nCoverage Type: Extended Service Plan / Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $70–$200 per faucet per year\n\n\nAmerican Standard (Manufacturer)\nCoverage Type: Extended Warranty / Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $60–$180 per faucet per year\n\n\nPfister (Manufacturer)\nCoverage Type: Extended Warranty / Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $50–$160 per faucet per year"
+  },
+  {
+    "source": "data/faucet.txt",
+    "chunk_id": 1,
+    "text": "ear\n\n\nPfister (Manufacturer)\nCoverage Type: Extended Warranty / Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $50–$160 per faucet per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan (faucets and fixtures)\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $50–$200 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan (faucets and plumbing fixtures)\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $60–$220 per year"
+  },
+  {
+    "source": "data/garage_door_openers.txt",
+    "chunk_id": 0,
+    "text": "Document Title: Garage Door Opener Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nChamberlain Group (Manufacturer)\nCoverage Type: Manufacturer Limited Warranty Extension\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$90 per year\n\n\nLiftMaster (Manufacturer)\nCoverage Type: Manufacturer Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $40–$120 per year\n\n\nGenie (Manufacturer)\nCoverage Type: Manufacturer Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$100 per year\n\n\nCraftsman (Manufacturer)\nCoverage Type: Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $35–$110 per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$80 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $35–$90 per y"
+  },
+  {
+    "source": "data/garage_door_openers.txt",
+    "chunk_id": 1,
+    "text": "ngth: 1 year\n\n\nTypical Price: $30–$80 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $35–$90 per year\n\n\nBest Buy (Geek Squad)\nCoverage Type: Appliance Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $60–$150 per year\n\n\nUpsie (Third Party)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $40–$120 per year"
+  },
+  {
+    "source": "data/garbage disposals.txt",
+    "chunk_id": 0,
+    "text": "Document Title: Garbage Disposal Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nInSinkErator (Manufacturer)\nCoverage Type: Manufacturer Limited Warranty Extension\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $8–$10 per year\n\n\nWaste King (Manufacturer)\nCoverage Type: Manufacturer Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $10–$15 per year\n\n\nMoen (Manufacturer)\nCoverage Type: Limited Warranty Extension\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $5–$15 per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $10–$20 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $12–$20 per year\n\n\nBest Buy (Geek Squad)\nCoverage Type: Appliance Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $13–$18 per year\n\n\nUpsi"
+  },
+  {
+    "source": "data/garbage disposals.txt",
+    "chunk_id": 1,
+    "text": ": $12–$20 per year\n\n\nBest Buy (Geek Squad)\nCoverage Type: Appliance Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $13–$18 per year\n\n\nUpsie (Third Party)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $10–$23 per year"
+  },
+  {
+    "source": "data/hvac.txt",
+    "chunk_id": 0,
+    "text": "Document Title: HVAC System Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nCarrier (Manufacturer)\nCoverage Type: Extended Service Agreement\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $50–$150 per year\n\n\nTrane (Manufacturer)\nCoverage Type: Extended Warranty Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $40–$130 per year\n\n\nLennox (Manufacturer)\nCoverage Type: Extended Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $45–$140 per year\n\n\nRheem (Manufacturer)\nCoverage Type: Extended Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $35–$120 per year\n\n\nGoodman Manufacturing (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$100 per year\n\n\nAmerican Standard (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $40–$1"
+  },
+  {
+    "source": "data/hvac.txt",
+    "chunk_id": 1,
+    "text": "Typical Price: $30–$100 per year\n\n\nAmerican Standard (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $40–$120 per year\n\n\nHome Depot\nCoverage Type: Retail HVAC Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $100–$300 per year\n\n\nLowe's\nCoverage Type: Retail HVAC Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $100–$300 per year"
+  },
+  {
+    "source": "data/microwave_oven.txt",
+    "chunk_id": 0,
+    "text": "Document Title: Built-In Microwave Oven Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nGE Appliances (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $16–$44 per year\n\n\nWhirlpool (Manufacturer)\nCoverage Type: Extended Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $14–$40 per year\n\n\nKitchenAid (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $24–$60 per year\n\n\nSamsung (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $18–$50 per year\n\n\nLG (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $17–$48 per year\n\n\nBosch (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$70 per year\n\n\nHome Depo"
+  },
+  {
+    "source": "data/microwave_oven.txt",
+    "chunk_id": 1,
+    "text": "rice: $17–$48 per year\n\n\nBosch (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$70 per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $27–$52 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$60 per year\n\n\nBest Buy (Geek Squad)\nCoverage Type: Appliance Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $24–$70 per year\n\n\nUpsie (Third Party)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $16–$44 per year"
+  },
+  {
+    "source": "data/oven_and_cooktops.txt",
+    "chunk_id": 0,
+    "text": "Document Title: Built-In Microwave Oven Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nGE Appliances (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $16–$44 per year\n\n\nWhirlpool (Manufacturer)\nCoverage Type: Extended Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $14–$40 per year\n\n\nKitchenAid (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $24–$60 per year\n\n\nSamsung (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $18–$50 per year\n\n\nLG (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $17–$48 per year\n\n\nBosch (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$70 per year\n\n\nHome Depo"
+  },
+  {
+    "source": "data/oven_and_cooktops.txt",
+    "chunk_id": 1,
+    "text": "rice: $17–$48 per year\n\n\nBosch (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$70 per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $27–$52 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$60 per year\n\n\nBest Buy (Geek Squad)\nCoverage Type: Appliance Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $24–$70 per year\n\n\nUpsie (Third Party)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $16–$44 per year"
+  },
+  {
+    "source": "data/plumbing.txt",
+    "chunk_id": 0,
+    "text": "Document Title: Residential Plumbing System Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nMoen (Manufacturer)\nCoverage Type: Extended Service Plan / Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $50–$150 per fixture per year\n\n\nDelta Faucet (Manufacturer)\nCoverage Type: Extended Warranty / Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $60–$180 per fixture per year\n\n\nKohler (Manufacturer)\nCoverage Type: Extended Service Plan / Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $70–$200 per fixture per year\n\n\nAmerican Standard (Manufacturer)\nCoverage Type: Extended Warranty / Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $60–$180 per fixture per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan (plumbing fixtures, faucets, pipes)\n\n\nCoverage Length: 1 year\n\n\nTypica"
+  },
+  {
+    "source": "data/plumbing.txt",
+    "chunk_id": 1,
+    "text": "60–$180 per fixture per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan (plumbing fixtures, faucets, pipes)\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $50–$200 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan (plumbing systems)\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $60–$220 per year"
+  },
+  {
+    "source": "data/pool_and_spa.txt",
+    "chunk_id": 0,
+    "text": "Document Title: Pool and Spa Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nPentair (Manufacturer)\nCoverage Type: Extended Service Plan / Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $20–$80 per year\n\n\nHayward (Manufacturer)\nCoverage Type: Extended Warranty / Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $24–$90 per year\n\n\nJacuzzi (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$100 per year\n\n\nSundance Spas (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$90 per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan (pool and spa equipment)\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $40–$117 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan (pool and spa systems)\n\n\nCoverage Length: 1 y"
+  },
+  {
+    "source": "data/pool_and_spa.txt",
+    "chunk_id": 1,
+    "text": "overage Length: 1 year\n\n\nTypical Price: $40–$117 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan (pool and spa systems)\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $43–$100 per year"
   },
   {
     "source": "data/refrigerator.txt",
     "chunk_id": 0,
-    "text": "Document Title: Refrigerator Extended Warranty Price Comparison\nColumns:\n Provider or Brand\n Coverage Type\n Coverage Length\n Typical Price\nData:\nWhirlpool (Manufacturer)\n Coverage Type: Extended Service Plan\n Coverage Length: 1 year extension\n Typical Price: Approximately 60 to 120 dollars per year depending on refrigerator model\nSamsung (Manufacturer)\n Coverage Type: Extended Protection Plan\n Coverage Length: 2 to 5 years\n Typical Price: Approximately 150 to 350 dollars total depending on refrigerator price tier\nLG (Manufacturer)\n Coverage Type: Extended Service Plan\n Coverage Length: 2 to 5 years\n Typical Price: Approximately 140 to 320 dollars total depending on model and capacity\nBosch (Manufacturer)\n Coverage Type: Extended Warranty\n Coverage Length: Variable up to 5 years\n Typical Price: Quote required; commonly estimated 200 to 400 dollars depending on refrigerator model\nHome Depo"
+    "text": "Document Title: Refrigerator Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nWhirlpool (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $60–$120 per year\n\n\nSamsung (Manufacturer)\nCoverage Type: Extended Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$70 per year\n\n\nLG (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $28–$64 per year\n\n\nBosch (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $40–$80 per year \n\n\nHome Depot\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\n$44–$60 per year (5-year plan)\n\n\nLowe's\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $50–$70 per year\n\n\nBest Buy (Geek Squad)\nCoverage Type: Appliance Pro"
   },
   {
     "source": "data/refrigerator.txt",
     "chunk_id": 1,
-    "text": "overage Length: Variable up to 5 years\n Typical Price: Quote required; commonly estimated 200 to 400 dollars depending on refrigerator model\nHome Depot\n Coverage Type: Retail Protection Plan\n Coverage Length: 3 years\n Typical Price: Approximately 140 dollars for refrigerators priced between 1000 and 1499 dollars\nHome Depot\n Coverage Type: Retail Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 220 to 300 dollars for refrigerators priced between 1000 and 2000 dollars\nLowe's\n Coverage Type: Retail Protection Plan\n Coverage Length: 3 years\n Typical Price: Approximately 160 dollars depending on refrigerator price\nLowe's\n Coverage Type: Retail Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 250 to 350 dollars depending on refrigerator price\nBest Buy (Geek Squad)\n Coverage Type: Appliance Protection Plan\n Coverage Length: 5 years\n Typical Price: A"
+    "text": "Coverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $50–$70 per year\n\n\nBest Buy (Geek Squad)\nCoverage Type: Appliance Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $60–$90 per year\n\n\nUpsie (Third Party)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $50–$73 per year"
   },
   {
-    "source": "data/refrigerator.txt",
-    "chunk_id": 2,
-    "text": "50 dollars depending on refrigerator price\nBest Buy (Geek Squad)\n Coverage Type: Appliance Protection Plan\n Coverage Length: 5 years\n Typical Price: Approximately 300 to 450 dollars depending on refrigerator price and features\nUpsie (Third Party)\n Coverage Type: Extended Warranty\n Coverage Length: 3 years\n Typical Price: Approximately 150 to 220 dollars for refrigerators around 1200 dollars\nUpsie (Third Party)\n Coverage Type: Extended Warranty\n Coverage Length: 5 years\n Typical Price: Approximately 250 to 380 dollars for refrigerators around 1500 dollars"
+    "source": "data/washer_dryer.txt",
+    "chunk_id": 0,
+    "text": "Document Title: Washer and Dryer Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nWhirlpool (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $20–$70 per year\n\n\nLG (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $24–$80 per year\n\n\nSamsung (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $22–$76 per year\n\n\nMaytag (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $20–$70 per year\n\n\nGE Appliances (Manufacturer)\nCoverage Type: Extended Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $24–$80 per year\n\n\nBosch (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$90 per year\n\n\nHome Depot\nCoverage"
+  },
+  {
+    "source": "data/washer_dryer.txt",
+    "chunk_id": 1,
+    "text": "80 per year\n\n\nBosch (Manufacturer)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$90 per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $40–$90 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $43–$90 per year\n\n\nBest Buy (Geek Squad)\nCoverage Type: Appliance Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$80 per year\n\n\nUpsie (Third Party)\nCoverage Type: Extended Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $24–$70 per year"
+  },
+  {
+    "source": "data/water_heater.txt",
+    "chunk_id": 0,
+    "text": "Document Title: Water Heater Extended Warranty Price Comparison\nColumns:\nProvider or Brand\n\n\nCoverage Type\n\n\nCoverage Length\n\n\nTypical Price\n\n\nData:\nRheem (Manufacturer)\nCoverage Type: Manufacturer Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $20–$60 per year\n\n\nA. O. Smith (Manufacturer)\nCoverage Type: Manufacturer Extended Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $24–$70 per year\n\n\nBradford White (Manufacturer)\nCoverage Type: Extended Limited Warranty\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $30–$80 per year\n\n\nNavien (Manufacturer)\nCoverage Type: Extended Service Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $40–$100 per year\n\n\nHome Depot\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $50–$90 per year\n\n\nLowe's\nCoverage Type: Retail Protection Plan\n\n\nCoverage Length: 1 year\n\n\nTypical Price: $57–$100 per year"
   }
 ]
