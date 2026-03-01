@@ -10,6 +10,8 @@ import { ImageCarouselComponent } from 'src/app/components/image-carousel/image-
 // import {ApplianceBoxComponent} from "../../components/appliance-box/appliance-box.component";
 import {constructOutline} from "ionicons/icons";
 import { ImageUploadComponent } from 'src/app/components/image-upload/image-upload.component';
+import {ApplianceBoxComponent} from "../../components/appliance-box/appliance-box.component";
+import {LoadingComponent} from "../../components/loading/loading.component";
 
 @Component({
   selector: 'app-analysis',
@@ -17,9 +19,9 @@ import { ImageUploadComponent } from 'src/app/components/image-upload/image-uplo
   styleUrls: ['./analysis.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,
-    ImageCarouselComponent, 
-    // LoadingComponent, ApplianceBoxComponent, 
-    ImageUploadComponent
+    ImageCarouselComponent,
+    // LoadingComponent, ApplianceBoxComponent,
+    ImageUploadComponent, ApplianceBoxComponent, LoadingComponent
   ]
 })
 export class AnalysisPage implements OnInit {
