@@ -103,6 +103,8 @@ export class ImageUploadComponent {
   uploadImages() {
     if (this.selectedFiles.length === 0) return;
 
+    this.dataService.setPreviews(this.previews);
+
     this.isUploading = true;
     this.errorMessage = null;
 

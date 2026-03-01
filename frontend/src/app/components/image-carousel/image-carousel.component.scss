@@ -42,12 +42,12 @@
     z-index: 1;
 
     @media (orientation: landscape) {
-        top: 15%;
-        right: 53%;
+        top: -5%;
+        right: 1%;
     }
     
     @media (orientation: portrait) {
-        top: 5%;
-        right: 1%;
+        top: -2%;
+        right: -5%;
     }
 }
