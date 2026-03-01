@@ -1,6 +1,5 @@
 ion-content {
     --background: linear-gradient(to top, #004f81, #0e3b66, #0f294b, #0b1833, #00001c);
-    overflow: hidden;
 }
 
 .background {
@@ -37,25 +36,24 @@ ion-content {
     width: 100%;
     padding: 2%;
     align-items: start;
+    box-sizing: border-box;
 
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 100%;
 
     @media (orientation: landscape) {
         grid-template-columns: 1fr 1fr;
         align-items: center;
         margin: 0 auto;
+        max-width: 1200px;
+        min-height: 100vh;
     }
 }
 
 .grid-item {
     width: 100%;
-    max-height: 40vh;
     min-width: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
 }
 
 h1 {
@@ -66,4 +64,15 @@ h1 {
     text-wrap: pretty;
     padding: 10px 0 0 10px;
     right: 10%;
+}
+
+.carousel-container {
+    width: 100%;
+    position: relative;
+    max-width: 100%; 
+    
+    @media (orientation: portrait) {
+        width: 90vw; 
+        margin: 0 auto;
+    }
 }
