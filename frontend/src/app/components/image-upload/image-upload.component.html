@@ -7,9 +7,9 @@
       (dragleave)="onDragLeave($event)"
       (drop)="onDrop($event)"
       [class.drag-over]="isDragging">
-      
+
       <div class="upload-content">
-        <ion-icon name="images-outline" color="primary"></ion-icon>
+        <img src="assets/image.svg" alt = "">
         <h3>Upload Multiple Images</h3>
         <p>Drag files here or <span>click to browse</span></p>
       </div>
@@ -39,7 +39,7 @@
           <h2 class="ion-text-nowrap">{{ img.name }}</h2>
           <p>{{ (img.size / 1024).toFixed(1) }} KB</p>
         </ion-label>
-        <ion-button fill="clear" color="medium" (click)="removeImage(i)">
+        <ion-button fill="clear" color="danger" (click)="removeImage(i)">
           <ion-icon name="trash-outline" slot="icon-only"></ion-icon>
         </ion-button>
       </ion-item>
