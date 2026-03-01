@@ -5,6 +5,7 @@ import {environment} from "../../../environments/environment";
 import {Injectable} from '@angular/core';
 import {ApplianceStateService} from "../../services/appliance-state-service";
 import {IonItem, IonLabel, IonList, IonSpinner} from "@ionic/angular/standalone";
+import {NgForOf, NgIf} from "@angular/common";
 
 export interface ApplianceItem {
   name: string
@@ -20,7 +21,9 @@ export interface ApplianceItem {
     IonList,
     IonItem,
     IonLabel,
-    IonSpinner
+    IonSpinner,
+    NgForOf,
+    NgIf
   ],
 })
 
@@ -29,6 +32,7 @@ export class ApplianceBoxComponent implements OnInit {
   @Input() mainLabel: string = "Appliances and Systems";
   @Input() name!: string
   @Input() items: ApplianceItem[] = [];
+  protected isLoading: any;
 
   constructor(private dataService: DataService, private http: HttpClient, private appliance: ApplianceStateService) {
   }
@@ -70,7 +74,7 @@ export class ApplianceBoxComponent implements OnInit {
     this.http.post<{price:number}>(`${environment.api_url}/api/calculate`, {description}).subscribe({
       next: (res) => {
         const parsedResponse = res.price
-        console.log(`${res.price} files uploaded. Response:`, parsedResponse);
+        console.log( parsedResponse);
         console.log("one of the prices has been calculated")
         return parsedResponse
       },
