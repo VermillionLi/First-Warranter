@@ -1,47 +1,77 @@
-Dishwasher
 Document Title: Dishwasher Extended Warranty Price Comparison
-
-
 Columns:
+Provider or Brand
+
+
+Coverage Type
+
+
+Coverage Length
+
+
+Typical Price
+
+
+=======
  Provider or Brand
  Coverage Type
  Coverage Length
  Typical Price
-mn
+
 Data:
 Whirlpool (Manufacturer)
- Coverage Type: Extended Service Plan
- Coverage Length: 1 year
- Typical Price: 43 to 82 dollars per year
+Coverage Type: Extended Service Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $43–$82 per year
+
+
 Home Depot
- Coverage Type: Retail Protection Plan
- Coverage Length: 3 years
- Typical Price: Approximately 105 dollars for appliances priced between 700 and 999 dollars
-Home Depot
- Coverage Type: Retail Protection Plan
- Coverage Length: 5 years
- Typical Price: Approximately 160 dollars for appliances priced between 700 and 999 dollars
-Lowes
- Coverage Type: Retail Protection Plan
- Coverage Length: 3 years
- Typical Price: Approximately 130 dollars depending on appliance price
-Lowes
- Coverage Type: Retail Protection Plan
- Coverage Length: 5 years
- Typical Price: Approximately 200 dollars depending on appliance price
+Coverage Type: Retail Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price:$32 - $35 per year
+
+
+Lowe's
+Coverage Type: Retail Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price:$40 - $43 per year 
+
+
 Best Buy (Geek Squad)
- Coverage Type: Retail Service Plan
- Coverage Length: 5 years
- Typical Price: Approximately 300 dollars based on older plan example
+Coverage Type: Retail Service Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $60 per year
+
+
 Upsie (Third Party)
- Coverage Type: Extended Warranty
- Coverage Length: 3 years
- Typical Price: Approximately 98.99 dollars for an 849 dollar dishwasher example
-Upsie (Third Party)
- Coverage Type: Extended Warranty
- Coverage Length: 5 years
- Typical Price: Approximately 154.99 dollars for an 849 dollar dishwasher example
-Bosch (Manufacturer)
- Coverage Type: Extended Warranty
- Coverage Length: Variable
- Typical Price: Quote required
+Coverage Type: Extended Warranty
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $31 - $32.99 per year (3-year example plan)
+
+
+
+
+
+
+
+

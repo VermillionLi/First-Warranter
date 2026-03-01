@@ -1,0 +1,97 @@
+Document Title: HVAC System Extended Warranty Price Comparison
+Columns:
+Provider or Brand
+
+
+Coverage Type
+
+
+Coverage Length
+
+
+Typical Price
+
+
+Data:
+Carrier (Manufacturer)
+Coverage Type: Extended Service Agreement
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $50–$150 per year
+
+
+Trane (Manufacturer)
+Coverage Type: Extended Warranty Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $40–$130 per year
+
+
+Lennox (Manufacturer)
+Coverage Type: Extended Limited Warranty
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $45–$140 per year
+
+
+Rheem (Manufacturer)
+Coverage Type: Extended Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $35–$120 per year
+
+
+Goodman Manufacturing (Manufacturer)
+Coverage Type: Extended Service Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $30–$100 per year
+
+
+American Standard (Manufacturer)
+Coverage Type: Extended Warranty
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $40–$120 per year
+
+
+Home Depot
+Coverage Type: Retail HVAC Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $100–$300 per year
+
+
+Lowe's
+Coverage Type: Retail HVAC Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $100–$300 per year
+
+
+
+

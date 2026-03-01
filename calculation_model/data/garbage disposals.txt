@@ -1,0 +1,87 @@
+Document Title: Garbage Disposal Extended Warranty Price Comparison
+Columns:
+Provider or Brand
+
+
+Coverage Type
+
+
+Coverage Length
+
+
+Typical Price
+
+
+Data:
+InSinkErator (Manufacturer)
+Coverage Type: Manufacturer Limited Warranty Extension
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $8–$10 per year
+
+
+Waste King (Manufacturer)
+Coverage Type: Manufacturer Limited Warranty
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $10–$15 per year
+
+
+Moen (Manufacturer)
+Coverage Type: Limited Warranty Extension
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $5–$15 per year
+
+
+Home Depot
+Coverage Type: Retail Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $10–$20 per year
+
+
+Lowe's
+Coverage Type: Retail Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $12–$20 per year
+
+
+Best Buy (Geek Squad)
+Coverage Type: Appliance Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $13–$18 per year
+
+
+Upsie (Third Party)
+Coverage Type: Extended Warranty
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $10–$23 per year
+
+
+
+

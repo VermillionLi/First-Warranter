@@ -36,7 +36,7 @@ const contents = [
     },
     { text: HOME_WARRANTY_PROMPT },
 ];
-
+//TODO: Turn this into a function that takes in base64
 async function testImage() {
     const response = await ai.models.generateContent({
         model: "gemini-3-flash-preview",
@@ -63,10 +63,9 @@ async function generateDescriptions(){
 
     const response = await ai.models.generateContent({
         model: "gemini-3-flash-preview",
-        contents: contents,
+        contents: apiContents,
     });
-    return response.text
-    //works
+    return response
 
 }
 

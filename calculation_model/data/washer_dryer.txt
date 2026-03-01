@@ -1,4 +1,4 @@
-Document Title: Refrigerator Extended Warranty Price Comparison
+Document Title: Washer and Dryer Extended Warranty Price Comparison
 Columns:
 Provider or Brand
 
@@ -20,17 +20,7 @@ Coverage Type: Extended Service Plan
 Coverage Length: 1 year
 
 
-Typical Price: $60–$120 per year
-
-
-Samsung (Manufacturer)
-Coverage Type: Extended Protection Plan
-
-
-Coverage Length: 1 year
-
-
-Typical Price: $30–$70 per year
+Typical Price: $20–$70 per year
 
 
 LG (Manufacturer)
@@ -40,7 +30,37 @@ Coverage Type: Extended Service Plan
 Coverage Length: 1 year
 
 
-Typical Price: $28–$64 per year
+Typical Price: $24–$80 per year
+
+
+Samsung (Manufacturer)
+Coverage Type: Extended Warranty
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $22–$76 per year
+
+
+Maytag (Manufacturer)
+Coverage Type: Extended Service Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $20–$70 per year
+
+
+GE Appliances (Manufacturer)
+Coverage Type: Extended Protection Plan
+
+
+Coverage Length: 1 year
+
+
+Typical Price: $24–$80 per year
 
 
 Bosch (Manufacturer)
@@ -50,7 +70,7 @@ Coverage Type: Extended Warranty
 Coverage Length: 1 year
 
 
-Typical Price: $40–$80 per year 
+Typical Price: $30–$90 per year
 
 
 Home Depot
@@ -60,7 +80,7 @@ Coverage Type: Retail Protection Plan
 Coverage Length: 1 year
 
 
-$44–$60 per year (5-year plan)
+Typical Price: $40–$90 per year
 
 
 Lowe's
@@ -70,7 +90,7 @@ Coverage Type: Retail Protection Plan
 Coverage Length: 1 year
 
 
-Typical Price: $50–$70 per year
+Typical Price: $43–$90 per year
 
 
 Best Buy (Geek Squad)
@@ -80,7 +100,7 @@ Coverage Type: Appliance Protection Plan
 Coverage Length: 1 year
 
 
-Typical Price: $60–$90 per year
+Typical Price: $30–$80 per year
 
 
 Upsie (Third Party)
@@ -90,7 +110,7 @@ Coverage Type: Extended Warranty
 Coverage Length: 1 year
 
 
-Typical Price: $50–$73 per year
+Typical Price: $24–$70 per year
 
 
 
