@@ -7,7 +7,7 @@ import {Injectable} from '@angular/core';
 import {ApplianceStateService} from "../../services/appliance-state-service";
 import {IonItem, IonLabel, IonList, IonSpinner} from "@ionic/angular/standalone";
 import {NgForOf, NgIf} from "@angular/common";
-import { map } from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 
 
 export interface ApplianceItem {
@@ -42,9 +42,9 @@ export class ApplianceBoxComponent implements OnInit {
   ngOnInit() {
     console.log("arrived at appliancebox")
     this.dataService.messages$.subscribe(dict => {
-    this.populateItems(dict);
-    console.log("please don't be empty: " + this.dataService.getMasterDict())
-  });
+      this.populateItems(dict);
+      console.log("please don't be empty: " + this.dataService.getMasterDict())
+    });
   }
 
   populateItems(dict: ServerMessages) {
@@ -55,6 +55,13 @@ export class ApplianceBoxComponent implements OnInit {
         price: 'loading...'
       });
     });
+    let sum = {
+      name: "🟩Total Estimated Cost",
+      description: "🟩Total Estimated Cost /yr",
+      price: '0'
+    }
+    this.items.push(sum)
+
     this.handleNumbers()
   }
 
@@ -63,7 +70,7 @@ export class ApplianceBoxComponent implements OnInit {
     const img_dict = this.dataService.getMasterDict()
     console.log("managed to get master dict: " + Object.keys(img_dict).length)
 
-    let totalPrice = 0;
+    let totalPrice: string = '0';
     for (const key in img_dict) {
       const input = key + ', ' + img_dict[key]
       console.log("this is input to ollama: " + input)
@@ -71,35 +78,37 @@ export class ApplianceBoxComponent implements OnInit {
       this.sendProcesses(key + ", " + img_dict[key]).subscribe(price => {
         console.log("received price: " + price)
         const item = this.items.find(i => i.name === key)
-        if (item){
+        if (item) {
           item.price = price.toString()
-            totalPrice += price;
+          totalPrice = String(parseInt(String(totalPrice)) + parseInt(String(price)));
+          const total = this.items.find(i => i.name === '🟩Total Estimated Cost')
+          if (total) {
+            total.price = totalPrice.toString()
+
+
+          }
         }
-    });   
-    //   const something = this.sendProcesses(key + ", " + img_dict[key])
-    //   const item = this.items.find(i => i.name === key)
-    //   if (item){
-    //     item.price = something
-    //   }
-    //   Object.assign({name: item, description: img_dict[key], something});
+      });
+
+      //   const something = this.sendProcesses(key + ", " + img_dict[key])
+      //   const item = this.items.find(i => i.name === key)
+      //   if (item){
+      //     item.price = something
+      //   }
+      //   Object.assign({name: item, description: img_dict[key], something});
     }
 
-    this.items.push({
-      name: "🟩Total Estimated Cost",
-      description: "",
-      price: totalPrice.toString()
-    })
   }
 
 
   sendProcesses(description: string) {
-  return this.http
-    .post<{ price: number }>(
-      `${environment.api_url}/api/calculate`,
-      { description }
-    )
-    .pipe(map(res => res.price));
-}
+    return this.http
+      .post<{ price: number }>(
+        `${environment.api_url}/api/calculate`,
+        {description}
+      )
+      .pipe(map(res => res.price));
+  }
 
 
 }
