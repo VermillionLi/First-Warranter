@@ -139,6 +139,7 @@ p {
     border: solid 1px white;
     width: 12vw;
     height: 20vh;
+    top: 20%;
 
     & {
         min-width: 150px;
@@ -153,12 +154,10 @@ p {
     }
 
     @media (orientation: landscape) {
-        top: 12%;
-        right: -55%;
+        right: -65%;
     }
 
     @media (orientation: portrait) {
-        top: 12%;
         right: -40%;
     }
 }
