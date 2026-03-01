@@ -7,6 +7,7 @@ import {DataService} from "../../services/data-service";
 import {Router} from "@angular/router";
 import { ImageCarouselComponent } from 'src/app/components/image-carousel/image-carousel.component';
 import { LoadingComponent } from 'src/app/components/loading/loading.component';
+import {ApplianceBoxComponent} from "../../components/appliance-box/appliance-box.component";
 
 @Component({
   selector: 'app-analysis',
@@ -14,7 +15,7 @@ import { LoadingComponent } from 'src/app/components/loading/loading.component';
   styleUrls: ['./analysis.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,
-    ImageCarouselComponent, LoadingComponent
+    ImageCarouselComponent, LoadingComponent, ApplianceBoxComponent
   ]
 })
 export class AnalysisPage implements OnInit {

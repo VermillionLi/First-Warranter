@@ -7,8 +7,8 @@ import {ApplianceStateService} from "../../services/appliance-state-service";
 
 export interface ApplianceItem {
   name: string
-  description: string;
-  price: number,
+  description: any;
+  price: string,
 }
 
 @Component({
@@ -31,7 +31,8 @@ export class ApplianceBoxComponent implements OnInit {
   }
 
   initiateNumbers() {
-    const img_dict = this.dataService.getMasterDict()
+    //const img_dict = this.dataService.getMasterDict()
+    const img_dict = { "HVAC": "Central heating and cooling system with a modern five blade wooden ceiling fan in good condition", "Electrical": "Residential electrical system with recessed ceiling lighting and wall outlets in good condition", "Plumbing": "Standard home plumbing system with water heater and fixtures in good condition", "Oven": "Built in stainless steel wall oven in good condition", "Microwave": "Built in stainless steel microwave oven in good condition", "Fridge": "Stainless steel refrigerator in kitchen area in good condition", "Dishwasher": "Built in stainless steel dishwasher in good condition", "Stove": "Kitchen cooktop with standard burners in good condition", "Washer": "Standard top or front load washing machine in good condition", "Dryer": "Standard electric or gas clothes dryer in good condition" } //rmove once done testing
     for (const key in img_dict) {
 
       this.items.push(this.ApplianceItem = {name: key, description: img_dict[key], price: "loading..."})
