@@ -23,7 +23,7 @@ EMBED_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 # - you can change model names without editing code
 # - you can point to a different host if needed (rare)
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2:3b")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2")
 
 # Retrieval parameters:
 # TOP_K controls how many chunks we fetch from the vector DB.
@@ -246,6 +246,8 @@ class RAGBot:
         resp = requests.post(f"{OLLAMA_URL}/api/chat", json=payload, timeout=120)
 
         # Raise an error if Ollama returns non-200 (helps debugging)
+        print("status", resp.status_code)
+        print("body: ", resp.text)
         resp.raise_for_status()
 
         # Parse JSON response and return the assistant message

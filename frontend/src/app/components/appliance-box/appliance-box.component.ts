@@ -7,6 +7,8 @@ import {Injectable} from '@angular/core';
 import {ApplianceStateService} from "../../services/appliance-state-service";
 import {IonItem, IonLabel, IonList, IonSpinner} from "@ionic/angular/standalone";
 import {NgForOf, NgIf} from "@angular/common";
+import { map } from 'rxjs/operators';
+
 
 export interface ApplianceItem {
   name: string
@@ -57,32 +59,38 @@ export class ApplianceBoxComponent implements OnInit {
   }
 
 
-  handleNumbers() {
+  async handleNumbers() {
     const img_dict = this.dataService.getMasterDict()
     console.log("managed to get master dict: " + Object.keys(img_dict).length)
     for (const key in img_dict) {
       const input = key + ', ' + img_dict[key]
       console.log("this is input to ollama: " + input)
-      const something = this.sendProcesses(key + ", " + img_dict[key])
-      const item = this.items.find(i => i.name === key);
-      Object.assign({name: item, description: img_dict[key], something});
+
+      this.sendProcesses(key + ", " + img_dict[key]).subscribe(price => {
+        console.log("received price: " + price)
+        const item = this.items.find(i => i.name === key)
+        if (item){
+          item.price = price.toString()
+        }
+    });   
+    //   const something = this.sendProcesses(key + ", " + img_dict[key])
+    //   const item = this.items.find(i => i.name === key)
+    //   if (item){
+    //     item.price = something
+    //   }
+    //   Object.assign({name: item, description: img_dict[key], something});
     }
   }
 
 
   sendProcesses(description: string) {
-    this.http.post<{price:number}>(`${environment.api_url}/api/calculate`, {description}).subscribe({
-      next: (res) => {
-        const parsedResponse = res.price
-        console.log( parsedResponse);
-        console.log("one of the prices has been calculated")
-        return parsedResponse
-      },
-      error: (err) => {
-        console.error('CALCULATION FAILED?!?!?!?!', err)
-      }
-    });
-  }
+  return this.http
+    .post<{ price: number }>(
+      `${environment.api_url}/api/calculate`,
+      { description }
+    )
+    .pipe(map(res => res.price));
+}
 
 
 }
