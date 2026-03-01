@@ -10,6 +10,7 @@ export interface ServerMessages {
 export class DataService {
 
   private masterDict: ServerMessages = {};
+  private savedPreviews: any[] = [];
 
   private messageSource = new BehaviorSubject<ServerMessages>({});
   messages$ = this.messageSource.asObservable();
@@ -21,8 +22,16 @@ export class DataService {
     this.messageSource.next(this.masterDict);
   }
 
+  setPreviews(previews: any[]) {
+    this.savedPreviews = previews;
+  }
+
   public getMasterDict(){
     return this.masterDict
+  }
+
+  getPreviews() {
+    return this.savedPreviews;
   }
 
   public resetData() {
