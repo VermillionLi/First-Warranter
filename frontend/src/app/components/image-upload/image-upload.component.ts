@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { 
@@ -108,7 +109,7 @@ export class ImageUploadComponent {
       formData.append('images', file, file.name);
     });
 
-    this.http.post('http://localhost:3000/api/upload', formData).subscribe({
+    this.http.post(`${environment.api_url}/api/upload`, formData).subscribe({
       next: (res) => {
         console.log('Success', res);
         this.isUploading = false;
