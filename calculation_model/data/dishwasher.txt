@@ -12,6 +12,12 @@ Coverage Length
 Typical Price
 
 
+=======
+ Provider or Brand
+ Coverage Type
+ Coverage Length
+ Typical Price
+
 Data:
 Whirlpool (Manufacturer)
 Coverage Type: Extended Service Plan
