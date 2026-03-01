@@ -145,6 +145,11 @@ p {
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         pointer-events: none;
+        background: linear-gradient(
+            180deg, 
+            rgba(16, 11, 75, 0.5) 0%, 
+            rgba(36, 5, 5, 0.2) 100%
+        );
     }
 
     @media (orientation: landscape) {
