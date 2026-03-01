@@ -20,6 +20,7 @@ import {
   trashOutline, 
   imagesOutline 
 } from 'ionicons/icons';
+import { JSDocComment } from '@angular/compiler';
 
 @Component({
   selector: 'app-image-upload',
@@ -109,9 +110,16 @@ export class ImageUploadComponent {
       formData.append('images', file, file.name);
     });
 
-    this.http.post(`${environment.api_url}/api/upload`, formData).subscribe({
+    type uploadResponse = {
+        message: string;
+        count: number;
+        model_response: string;
+    }
+
+    this.http.post<uploadResponse>(`${environment.api_url}/api/upload`, formData).subscribe({
       next: (res) => {
-        console.log('Success', res);
+        const parsedResponse = JSON.parse(res.model_response);
+        console.log(`${res.count} files uploaded. Response:`, parsedResponse);
         this.isUploading = false;
         this.clearAll();
       },
