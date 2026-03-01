@@ -1,8 +1,8 @@
 <div class="carousel-container">
   <swiper-container 
-    #swiperRef
-    navigation="true" 
-    pagination="true" 
+    [navigation]="true" 
+    [pagination]="true" 
+    [loop]="true"
     class="main-swiper">
     
     <swiper-slide *ngFor="let img of images">
