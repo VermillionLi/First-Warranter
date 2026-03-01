@@ -18,10 +18,12 @@ export class AnalysisPage implements OnInit {
   constructor(private http: HttpClient, private dataService: DataService, private router: Router) { }
 
   ngOnInit() {
-
+    this.create_appliance_fields()
   }
 
   create_appliance_fields(){
+      for (const key in this.dataService.getMasterDict()){
 
+      }
   }
 }
