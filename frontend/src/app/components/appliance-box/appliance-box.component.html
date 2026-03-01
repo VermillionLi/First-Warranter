@@ -1,15 +1,18 @@
-<div class="appliance-box">
-    <ion-label class="main-title">{{ mainLabel }}</ion-label>
-    <ion-list lines="none">
-        <ion-item *ngFor="let item of items" class="appliance-item">
-            <ion-label>
-                <span class="description">{{ item.description }}</span>
-                <span class="price">${{ item.price }}</span>
-            </ion-label>
-        </ion-item>
-    </ion-list>
+<div class="box-wrapper">
+  <div class="main-label-container">
+    <span class="main-label">{{ mainLabel }}</span>
+  </div>
 
-    <div *ngIf="items.length === 0" class="empty-state">
-        <ion-spinner name="dots"></ion-spinner>
-    </div>
+  <ion-list lines="none">
+    <ion-item *ngFor="let item of items" class="appliance-item">
+      <ion-label>
+        <span class="description">{{ item.description }}:</span>
+        <span class="price">{{ item.price | currency }}</span>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div class="loading-footer" *ngIf="isLoading">
+    <ion-spinner name="dots"></ion-spinner>
+  </div>
 </div>

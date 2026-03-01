@@ -14,8 +14,7 @@ export class ApplianceBoxComponent  implements OnInit {
     @Input() mainLabel: string = "Appliances and Systems";
     @Input() name!: string
     @Input() items: ApplianceItem[] = [];
-
-
+    
   constructor() { }
 
   ngOnInit() {}
