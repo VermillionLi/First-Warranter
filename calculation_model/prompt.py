@@ -9,7 +9,9 @@ Rules:
    - name
    - condition
 
-3. Make reasonable inferences if some data (model, brand, or condition) is missing. Worse condition mean higher price, up to 40% more. DO NOT OVERESTIMATE
+2: You will judge prices based off a appliance's condition WITHIN the price range of its brand
+
+3. Make reasonable inferences if some data (model, brand, or condition) is missing.
 
 4. Output **a single integer**, representing the estimated cost in USD and YEARS they are covered, rounded to the nearest dollar. 
    - No text, no explanations, no JSON, nothing else.

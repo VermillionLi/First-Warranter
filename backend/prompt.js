@@ -17,7 +17,7 @@ Analyze the provided images of a home and detect all appliances, systems, and eq
    - Value: a plain descriptive string describing the item (brand, model, name, condition)
      - No special formatting or punctuation required
 
-4. Include all standard items even if not shown; make best guesses for brand/model/condition if missing.
+4. Include all standard items even if not shown; make best guesses for brand/condition/manufacturer even if missing.
 
 5. Example output:
 
