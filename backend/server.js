@@ -75,16 +75,19 @@ app.post(
     upload.array('images'),
     async (req, res) => {
         console.log('Received files:', req.files);
-        model_response = await generateDescriptions();
-        let img_disc = await generateDescriptions()
-        if (typeof img_disc === 'string') {
-        img_disc = img_disc
+        let model_response = await generateDescriptions();
+        if (typeof model_response === 'string') {
+        model_response = model_response
         .replace(/```(?:json)?\n?/g, '') // remove starting ```json or ```
         .replace(/```/g, '')             // remove ending ```
         .trim();
         }
 
-        res.status(200).send(img_disc)
+        res.status(200).json({
+            message: 'Files uploaded successfully!',
+            count: req.files.length,
+            model_response: model_response
+        });
     }
 );
 
