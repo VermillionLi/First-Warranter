@@ -1,65 +1,69 @@
-<ion-card class="upload-card">
-  <ion-card-content>
-    <div 
-      class="drop-zone" 
-      (click)="fileInput.click()"
-      (dragover)="onDragOver($event)"
-      (dragleave)="onDragLeave($event)"
-      (drop)="onDrop($event)"
-      [class.drag-over]="isDragging">
+<div class="card-wrapper">
+  <ion-card class="upload-card">
+    <ion-card-content>
+      <div 
+        class="drop-zone" 
+        (click)="fileInput.click()"
+        (dragover)="onDragOver($event)"
+        (dragleave)="onDragLeave($event)"
+        (drop)="onDrop($event)"
+        [class.drag-over]="isDragging">
 
-      <div class="upload-content">
-        <img src="assets/image.svg" alt = "">
-        <h3>Upload Multiple Images</h3>
-        <p>Drag files here or <span>click to browse</span></p>
+        <div class="upload-content">
+          <img src="assets/image.svg" alt = "">
+          <h3>Upload Multiple Images</h3>
+          <p>Drag files here or <span>click to browse</span></p>
+        </div>
+
+        <input 
+          #fileInput 
+          type="file" 
+          (change)="onFileSelected($event)" 
+          accept="image/png, image/jpeg, image/jpg" 
+          multiple 
+          hidden />
       </div>
 
-      <input 
-        #fileInput 
-        type="file" 
-        (change)="onFileSelected($event)" 
-        accept="image/png, image/jpeg, image/jpg" 
-        multiple 
-        hidden />
-    </div>
+      <div class="list-header" *ngIf="previews.length > 0">
+        <ion-label>Selected ({{ previews.length }})</ion-label>
+        <ion-button fill="clear" color="danger" size="small" (click)="clearAll()">
+          Clear All
+        </ion-button>
+      </div>
 
-    <div class="list-header" *ngIf="previews.length > 0">
-      <ion-label>Selected ({{ previews.length }})</ion-label>
-      <ion-button fill="clear" color="danger" size="small" (click)="clearAll()">
-        Clear All
+      <ion-list lines="full">
+        <ion-item *ngFor="let img of previews; let i = index" class="preview-item">
+          <ion-thumbnail slot="start">
+            <img [src]="img.url" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2 class="ion-text-nowrap">{{ img.name }}</h2>
+            <p>{{ (img.size / 1024).toFixed(1) }} KB</p>
+          </ion-label>
+          <ion-button fill="clear" color="danger" (click)="removeImage(i)">
+            <ion-icon name="trash-outline" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    <div class="button-container">
+      <ion-button 
+        (click)="uploadImages()" 
+        [disabled]="selectedFiles.length === 0 || isUploading"
+        class="fixed-upload-btn"
+        mode="ios">
+        <span *ngIf="!isUploading">
+          <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
+          Upload {{ selectedFiles.length > 0 ? selectedFiles.length : '' }} Images
+        </span>
+        <ion-spinner *ngIf="isUploading" name="crescent"></ion-spinner>
       </ion-button>
     </div>
-
-    <ion-list lines="full">
-      <ion-item *ngFor="let img of previews; let i = index" class="preview-item">
-        <ion-thumbnail slot="start">
-          <img [src]="img.url" />
-        </ion-thumbnail>
-        <ion-label>
-          <h2 class="ion-text-nowrap">{{ img.name }}</h2>
-          <p>{{ (img.size / 1024).toFixed(1) }} KB</p>
-        </ion-label>
-        <ion-button fill="clear" color="danger" (click)="removeImage(i)">
-          <ion-icon name="trash-outline" slot="icon-only"></ion-icon>
-        </ion-button>
-      </ion-item>
-    </ion-list>
-  </ion-card-content>
-  <div class="button-container">
-    <ion-button 
-      (click)="uploadImages()" 
-      [disabled]="selectedFiles.length === 0 || isUploading"
-      class="fixed-upload-btn"
-      mode="ios">
-      <span *ngIf="!isUploading">
-        <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
-        Upload {{ selectedFiles.length > 0 ? selectedFiles.length : '' }} Images
-      </span>
-      <ion-spinner *ngIf="isUploading" name="crescent"></ion-spinner>
-    </ion-button>
-  </div>
-  <div class="status-container" *ngIf="errorMessage">
-    <ion-icon name="alert-circle-outline"></ion-icon>
-    <p>{{ errorMessage }}</p>
-  </div>
-</ion-card>
+    <div class="status-container" *ngIf="errorMessage">
+      <ion-icon name="alert-circle-outline"></ion-icon>
+      <p>{{ errorMessage }}</p>
+    </div>
+  </ion-card>
+  <img class="star-solid star-deco-1" src="assets/4-point-star-solid.svg">
+  <img class="star-solid star-deco-2" src="assets/4-point-star-solid.svg">
+</div>
