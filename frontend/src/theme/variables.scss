@@ -1,2 +1,19 @@
 // For information on how to create your own theme, please refer to:
 // https://ionicframework.com/docs/theming/
+:root {
+	--ion-color-daanger: #ff4c61;
+	--ion-color-daanger-rgb: 255,76,97;
+	--ion-color-daanger-contrast: #000000;
+	--ion-color-daanger-contrast-rgb: 0,0,0;
+	--ion-color-daanger-shade: #e04355;
+	--ion-color-daanger-tint: #ff5e71;
+}
+
+.ion-color-daanger {
+	--ion-color-base: var(--ion-color-daanger);
+	--ion-color-base-rgb: var(--ion-color-daanger-rgb);
+	--ion-color-contrast: var(--ion-color-daanger-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-daanger-contrast-rgb);
+	--ion-color-shade: var(--ion-color-daanger-shade);
+	--ion-color-tint: var(--ion-color-daanger-tint);
+}
