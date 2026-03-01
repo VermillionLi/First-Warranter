@@ -237,7 +237,7 @@ class RAGBot:
             "stream": False,
             "options": {
                 # Lower temperature = more deterministic + less hallucination-prone
-                "temperature": 0.2
+                "temperature": 0
             }
         }
 
