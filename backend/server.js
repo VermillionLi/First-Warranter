@@ -150,5 +150,9 @@ app.get('/testPipeline', async (req, res) => {
     res.status(200).send(result)
 });
 
+//full pipeline:
+
+
+
 
 
