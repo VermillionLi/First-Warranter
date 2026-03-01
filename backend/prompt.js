@@ -32,6 +32,7 @@ Analyze the provided images of a home and detect all appliances, systems, and eq
 7. **Do not include any other fields or metadata.**
 8: DO NOT EVER INCLUDE ANYTHING OTHER THAN THE dictionary otherwise the system WILL CRASH
 9: DO NOT SAY JAVASCRIPT, otherwise there will be catastrophy 
+10. Never include any markdown formatting, code blocks, or explanations. ONLY the dictionary output is allowed.
 `;
 
 module.exports = {HOME_WARRANTY_PROMPT};
