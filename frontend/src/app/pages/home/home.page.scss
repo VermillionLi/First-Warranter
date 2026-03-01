@@ -11,8 +11,6 @@ ion-content {
     justify-content: center;
     align-items: center;
     z-index: 0;
-
-    min-height: 100vh;
 }
 
 h1 {
@@ -24,8 +22,6 @@ h1 {
     text-wrap: pretty;
 
     width: 100%;
-    padding: 10%;
-
     z-index: -999;
 
     @media (orientation: landscape) {
@@ -45,9 +41,8 @@ h2 {
     font-size: 200%;
     text-align: right;
     text-wrap: pretty;
-
     width: 100%;
-    padding: 10%;
+    z-index: -999;
 
     @media (orientation: landscape) {
         bottom: -10%;
@@ -65,6 +60,7 @@ p {
     color: white;
     bottom: 2%;
     left: -50%;
+    z-index: -999;
 }
 
 .background {
@@ -132,8 +128,8 @@ p {
 
     & {
         min-width: 150px;
-        backdrop-filter: blur(3px);
-        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         pointer-events: none;
     }
 

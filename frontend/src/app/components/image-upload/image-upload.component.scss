@@ -30,12 +30,12 @@
     & {
         min-width: 250px;
         overflow: hidden;
-        backdrop-filter: blur(3px);
-        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         background: linear-gradient(
         180deg, 
-        rgba(255, 255, 255, 0.01) 0%, 
-        rgba(255, 255, 255, 0.01) 100%
+        rgba(0, 0, 0, 0.1) 0%, 
+        rgba(255, 255, 255, 0.1) 100%
         );
     }
 }
